@@ -1,15 +1,6 @@
 import { useEffect } from 'react';
-import {
-  Navigation,
-  Footer,
-  Hero,
-  About,
-  Skills,
-  Experience,
-  Projects,
-  Education,
-  Contact,
-} from './components';
+import { Navigation, Footer, Hero } from './components';
+import { LazySection, About, Skills, Experience, Projects, Education, Contact } from './components/LazySection';
 import { updateSEO, seoData } from './utils/seo';
 
 function App() {
@@ -50,12 +41,24 @@ function App() {
       <Navigation />
       <main>
         <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Education />
-        <Contact />
+        <LazySection>
+          <About />
+        </LazySection>
+        <LazySection>
+          <Skills />
+        </LazySection>
+        <LazySection>
+          <Experience />
+        </LazySection>
+        <LazySection>
+          <Projects />
+        </LazySection>
+        <LazySection>
+          <Education />
+        </LazySection>
+        <LazySection>
+          <Contact />
+        </LazySection>
       </main>
       <Footer />
     </div>
