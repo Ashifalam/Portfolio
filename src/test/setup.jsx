@@ -74,6 +74,36 @@ vi.mock('react-icons/hi', () => ({
       <title>Send</title>
     </svg>
   ),
+  HiMoon: props => (
+    <svg data-testid="hi-moon" {...props}>
+      <title>Moon</title>
+    </svg>
+  ),
+  HiSun: props => (
+    <svg data-testid="hi-sun" {...props}>
+      <title>Sun</title>
+    </svg>
+  ),
+  HiMenu: props => (
+    <svg data-testid="hi-menu" {...props}>
+      <title>Menu</title>
+    </svg>
+  ),
+  HiX: props => (
+    <svg data-testid="hi-x" {...props}>
+      <title>Close</title>
+    </svg>
+  ),
+  HiDownload: props => (
+    <svg data-testid="hi-download" {...props}>
+      <title>Download</title>
+    </svg>
+  ),
+  HiChevronDown: props => (
+    <svg data-testid="hi-chevron-down" {...props}>
+      <title>Chevron Down</title>
+    </svg>
+  ),
 }));
 
 vi.mock('react-icons/fa', () => ({
