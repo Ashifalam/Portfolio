@@ -6,13 +6,14 @@ ESLINT_OUTPUT=$(npm run lint 2>&1)
 ESLINT_EXIT_CODE=$?
 
 if [ $ESLINT_EXIT_CODE -ne 0 ]; then
-  # Count the number of errors - look for "✖ X problems"
-  ERROR_COUNT=$(echo "$ESLINT_OUTPUT" | grep "✖" | grep "problems" | sed 's/.*✖ \([0-9]*\) problems.*/\1/')
+  # Extract error count using a simpler approach
+  ERROR_COUNT=$(echo "$ESLINT_OUTPUT" | grep "✖" | grep -o "[0-9]\+ problems" | grep -o "[0-9]\+")
   MAX_ALLOWED_ERRORS=28
   
-  # If we couldn't extract the count, default to 0
-  if [ -z "$ERROR_COUNT" ] || ! [ "$ERROR_COUNT" -eq "$ERROR_COUNT" ] 2>/dev/null; then
-    ERROR_COUNT=0
+  # If we couldn't extract the count, default to 999 to be safe
+  if [ -z "$ERROR_COUNT" ]; then
+    ERROR_COUNT=999
+    echo "⚠️  Could not parse error count, defaulting to $ERROR_COUNT"
   fi
   
   echo "📊 Found $ERROR_COUNT ESLint errors (max allowed: $MAX_ALLOWED_ERRORS)"
@@ -20,8 +21,6 @@ if [ $ESLINT_EXIT_CODE -ne 0 ]; then
   if [ "$ERROR_COUNT" -gt "$MAX_ALLOWED_ERRORS" ]; then
     echo "❌ ESLint error count ($ERROR_COUNT) exceeds maximum allowed ($MAX_ALLOWED_ERRORS)."
     echo "🔧 Please fix some errors before pushing. Run 'npm run lint:fix' to auto-fix."
-    echo "📝 Current errors:"
-    echo "$ESLINT_OUTPUT"
     exit 1
   else
     echo "✅ ESLint error count ($ERROR_COUNT) is within acceptable limit ($MAX_ALLOWED_ERRORS)."
