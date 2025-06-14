@@ -6,6 +6,11 @@ import {
   HiLocationMarker,
   HiPaperAirplane,
 } from 'react-icons/hi';
+import { 
+  HiOutlineGlobeAlt,
+  HiOutlineCode,
+  HiOutlineChatAlt2
+} from 'react-icons/hi';
 import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 import { emailjsConfig } from '../config/emailjs';
@@ -50,19 +55,19 @@ const Contact = () => {
   const socialLinks = [
     {
       name: 'LinkedIn',
-      icon: FaLinkedin,
+      icon: HiOutlineGlobeAlt,
       url: 'https://www.linkedin.com/in/aquif-zubair/',
       color: 'hover:text-blue-600',
     },
     {
       name: 'GitHub',
-      icon: FaGithub,
+      icon: HiOutlineCode,
       url: 'https://github.com/aquifzubair',
       color: 'hover:text-gray-900 dark:hover:text-white',
     },
     {
       name: 'Twitter',
-      icon: FaTwitter,
+      icon: HiOutlineChatAlt2,
       url: '#',
       color: 'hover:text-blue-400',
     },
@@ -218,20 +223,24 @@ const Contact = () => {
                   Follow Me
                 </h4>
                 <div className="flex space-x-4">
-                  {socialLinks.map((social, index) => (
-                    <motion.a
-                      key={index}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-200 ${social.color} transition-all duration-200 hover:scale-110 border border-gray-200 dark:border-gray-700`}
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <social.icon className="h-6 w-6" />
-                      <span className="sr-only">{social.name}</span>
-                    </motion.a>
-                  ))}
+                  {socialLinks.map((social, index) => {
+                    const IconComponent = social.icon;
+                    return (
+                      <motion.a
+                        key={index}
+                        href={social.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-200 ${social.color} transition-all duration-200 hover:scale-110 border border-gray-200 dark:border-gray-700`}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                        title={social.name}
+                      >
+                        <IconComponent className="h-6 w-6 flex-shrink-0" style={{ minWidth: '24px', minHeight: '24px' }} />
+                        <span className="sr-only">{social.name}</span>
+                      </motion.a>
+                    );
+                  })}
                 </div>
               </div>
             </CardBody>
