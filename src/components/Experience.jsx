@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import { HiCalendar, HiLocationMarker, HiOfficeBuilding } from 'react-icons/hi';
 import Section, { SectionHeader } from './Section';

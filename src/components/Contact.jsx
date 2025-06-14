@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   HiMail,
@@ -96,14 +96,14 @@ const Contact = () => {
       ) {
         console.log('📧 EmailJS Configuration Required:');
         console.log(
-          '1. Go to https://www.emailjs.com/ and create a free account'
+          '1. Go to https://www.emailjs.com/ and create a free account',
         );
         console.log('2. Create a new service (Gmail, Outlook, etc.)');
         console.log(
-          '3. Create an email template with variables: {{from_name}}, {{from_email}}, {{subject}}, {{message}}, {{to_email}}'
+          '3. Create an email template with variables: {{from_name}}, {{from_email}}, {{subject}}, {{message}}, {{to_email}}',
         );
         console.log(
-          '4. Update src/config/emailjs.js with your actual credentials'
+          '4. Update src/config/emailjs.js with your actual credentials',
         );
         console.log('5. Form data that would be sent:', templateParams);
 
@@ -114,7 +114,7 @@ const Contact = () => {
           emailjsConfig.serviceId,
           emailjsConfig.templateId,
           templateParams,
-          emailjsConfig.publicKey
+          emailjsConfig.publicKey,
         );
         setSubmitStatus('success');
       }

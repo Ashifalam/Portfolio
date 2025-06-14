@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenu, HiX, HiSun, HiMoon } from 'react-icons/hi';
 import Button from './Button';
@@ -21,7 +21,7 @@ const Navigation = () => {
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia(
-      '(prefers-color-scheme: dark)'
+      '(prefers-color-scheme: dark)',
     ).matches;
 
     if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {

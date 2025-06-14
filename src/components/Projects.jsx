@@ -1,6 +1,6 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
-import { HiExternalLink, HiCode, HiStar } from 'react-icons/hi';
+import { HiCode, HiStar } from 'react-icons/hi';
 import { FaGithub } from 'react-icons/fa';
 import Section, { SectionHeader } from './Section';
 import Card, { CardBody, CardHeader, CardTitle, CardDescription } from './Card';
