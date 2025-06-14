@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { HiMail, HiPhone, HiLocationMarker, HiPaperAirplane } from 'react-icons/hi';
 import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
+import { emailjsConfig } from '../config/emailjs';
 import Section, { SectionHeader } from './Section';
 import Card, { CardBody, CardHeader, CardTitle } from './Card';
 import Button from './Button';
@@ -75,7 +76,6 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // EmailJS configuration - you'll need to set up your EmailJS account and replace these values
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
@@ -84,20 +84,36 @@ const Contact = () => {
         to_email: 'aquifzubair@gmail.com'
       };
 
-      // For now, we'll simulate the email sending
-      // To enable actual email sending, you need to:
-      // 1. Create an EmailJS account at https://www.emailjs.com/
-      // 2. Create a service and template
-      // 3. Replace 'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', 'YOUR_PUBLIC_KEY' with your actual values
-      // 4. Uncomment the line below and comment out the simulation
+      // Check if EmailJS is configured
+      if (emailjsConfig.serviceId === 'YOUR_SERVICE_ID' || 
+          emailjsConfig.templateId === 'YOUR_TEMPLATE_ID' || 
+          emailjsConfig.publicKey === 'YOUR_PUBLIC_KEY') {
+        
+        // EmailJS not configured - show instructions
+        console.log('📧 EmailJS Configuration Required:');
+        console.log('1. Go to https://www.emailjs.com/ and create a free account');
+        console.log('2. Create a new service (Gmail, Outlook, etc.)');
+        console.log('3. Create an email template with variables: {{from_name}}, {{from_email}}, {{subject}}, {{message}}, {{to_email}}');
+        console.log('4. Update src/config/emailjs.js with your actual credentials');
+        console.log('5. Form data that would be sent:', templateParams);
+        
+        // Simulate for now
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        setSubmitStatus('success');
+        
+      } else {
+        // EmailJS is configured - send actual email
+        await emailjs.send(
+          emailjsConfig.serviceId,
+          emailjsConfig.templateId,
+          templateParams,
+          emailjsConfig.publicKey
+        );
+        setSubmitStatus('success');
+      }
       
-      // await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'YOUR_PUBLIC_KEY');
-      
-      // Simulation for now
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      setSubmitStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
+      
     } catch (error) {
       console.error('Email sending failed:', error);
       setSubmitStatus('error');
