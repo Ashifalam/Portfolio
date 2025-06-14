@@ -1,5 +1,15 @@
 import React from 'react';
-import { Navigation, Footer, Hero } from './components';
+import { 
+  Navigation, 
+  Footer, 
+  Hero, 
+  About, 
+  Skills, 
+  Experience, 
+  Projects, 
+  Education, 
+  Contact 
+} from './components';
 
 function App() {
   return (
@@ -7,7 +17,12 @@ function App() {
       <Navigation />
       <main>
         <Hero />
-        {/* Other sections will be added here */}
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Education />
+        <Contact />
       </main>
       <Footer />
     </div>
