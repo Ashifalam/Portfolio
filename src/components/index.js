@@ -4,6 +4,7 @@ export { default as Card, CardHeader, CardBody, CardFooter, CardTitle, CardDescr
 export { default as Navigation } from './Navigation';
 export { default as Footer } from './Footer';
 export { default as Section, SectionHeader } from './Section';
+export { default as Hero } from './Hero';
 
 // Re-export design system utilities
 export { getButtonClasses, getCardClasses, getInputClasses, animations } from '../styles/design-system';
