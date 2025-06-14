@@ -223,27 +223,6 @@ const Projects = () => {
                   </ul>
                 </div>
 
-                {/* Action Buttons */}
-                <div className="flex space-x-3 mt-auto">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    icon={FaGithub}
-                    onClick={() => window.open(project.github, '_blank')}
-                    className="flex-1"
-                  >
-                    Code
-                  </Button>
-                  <Button
-                    variant="primary"
-                    size="sm"
-                    icon={HiExternalLink}
-                    onClick={() => window.open(project.demo, '_blank')}
-                    className="flex-1"
-                  >
-                    Demo
-                  </Button>
-                </div>
               </CardBody>
             </Card>
           </motion.div>

@@ -188,24 +188,6 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Availability Status */}
-              <motion.div
-                className="mt-8 p-4 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-800"
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                  <p className="text-green-800 dark:text-green-200 font-medium">
-                    Available for new opportunities
-                  </p>
-                </div>
-                <p className="text-green-600 dark:text-green-300 text-sm mt-1">
-                  Currently open to full-time positions and freelance projects
-                </p>
-              </motion.div>
             </CardBody>
           </Card>
         </motion.div>
