@@ -212,7 +212,7 @@ const Experience = () => {
         
         <Card className="text-center p-6">
           <CardBody>
-            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">50+</div>
+            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">20+</div>
             <div className="text-gray-600 dark:text-gray-300">Projects Delivered</div>
           </CardBody>
         </Card>
