@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SiNodedotjs, SiPostgresql, SiJavascript, SiTypescript, SiReact, SiExpress, SiRedis, SiDocker, SiGit } from 'react-icons/si';
+import { SiNodedotjs, SiPostgresql, SiJavascript, SiTypescript, SiReact, SiExpress, SiRedis, SiDocker, SiGit, SiMongodb } from 'react-icons/si';
 import { HiServer, HiDatabase, HiCode, HiCog, HiCloud } from 'react-icons/hi';
 import Section, { SectionHeader } from './Section';
 import Card, { CardBody, CardHeader, CardTitle } from './Card';
@@ -26,6 +26,7 @@ const Skills = () => {
         { name: 'PostgreSQL', icon: SiPostgresql, level: 90 },
         { name: 'Redis', icon: SiRedis, level: 80 },
         { name: 'MySQL', icon: SiPostgresql, level: 85 },
+        { name: 'MongoDB', icon: SiMongodb, level: 60 },
       ]
     },
     {
