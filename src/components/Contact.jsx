@@ -55,19 +55,19 @@ const Contact = () => {
   const socialLinks = [
     {
       name: 'LinkedIn',
-      icon: HiOutlineGlobeAlt,
+      icon: FaLinkedin,
       url: 'https://www.linkedin.com/in/aquif-zubair/',
       color: 'hover:text-blue-600',
     },
     {
       name: 'GitHub',
-      icon: HiOutlineCode,
+      icon: FaGithub,
       url: 'https://github.com/aquifzubair',
       color: 'hover:text-gray-900 dark:hover:text-white',
     },
     {
       name: 'Twitter',
-      icon: HiOutlineChatAlt2,
+      icon: FaTwitter,
       url: '#',
       color: 'hover:text-blue-400',
     },
@@ -235,9 +235,9 @@ const Contact = () => {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                         title={social.name}
+                        aria-label={social.name}
                       >
-                        <IconComponent className="h-6 w-6 flex-shrink-0" style={{ minWidth: '24px', minHeight: '24px' }} />
-                        <span className="sr-only">{social.name}</span>
+                        <IconComponent className="h-6 w-6" />
                       </motion.a>
                     );
                   })}
