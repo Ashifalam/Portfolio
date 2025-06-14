@@ -27,8 +27,8 @@ const Contact = () => {
     {
       icon: HiMail,
       label: 'Email',
-      value: 'aquifzubair@gmail.com',
-      href: 'mailto:aquifzubair@gmail.com',
+      value: 'aquifzubair98@gmail.com',
+      href: 'mailto:aquifzubair98@gmail.com',
       color: 'text-blue-600 dark:text-blue-400',
     },
     {
@@ -86,7 +86,7 @@ const Contact = () => {
         from_email: formData.email,
         subject: formData.subject,
         message: formData.message,
-        to_email: 'aquifzubair@gmail.com',
+        to_email: 'aquifzubair98@gmail.com',
       };
 
       if (

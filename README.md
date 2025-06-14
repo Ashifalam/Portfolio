@@ -262,7 +262,7 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 📞 Contact
 
 **Aquif Zubair**
-- Email: aquifzubair@gmail.com
+- Email: aquifzubair98@gmail.com
 - LinkedIn: [linkedin.com/in/aquif-zubair](https://www.linkedin.com/in/aquif-zubair/)
 - GitHub: [github.com/aquifzubair](https://github.com/aquifzubair)
 

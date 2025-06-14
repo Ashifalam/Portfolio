@@ -29,8 +29,8 @@ const Footer = () => {
   const contactInfo = [
     {
       icon: HiMail,
-      text: 'aquifzubair@gmail.com',
-      href: 'mailto:aquifzubair@gmail.com',
+      text: 'aquifzubair98@gmail.com',
+      href: 'mailto:aquifzubair98@gmail.com',
     },
     {
       icon: HiPhone,

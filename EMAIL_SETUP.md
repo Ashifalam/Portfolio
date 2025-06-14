@@ -66,7 +66,7 @@ Your email template can use these variables:
 - `{{from_email}}` - Sender's email
 - `{{subject}}` - Email subject
 - `{{message}}` - Email message
-- `{{to_email}}` - Your email (aquifzubair@gmail.com)
+- `{{to_email}}` - Your email (aquifzubair98@gmail.com)
 
 ## 📝 Example Template
 
