@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { HiMail, HiPhone, HiLocationMarker, HiPaperAirplane } from 'react-icons/hi';
+import {
+  HiMail,
+  HiPhone,
+  HiLocationMarker,
+  HiPaperAirplane,
+} from 'react-icons/hi';
 import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 import { emailjsConfig } from '../config/emailjs';
@@ -13,7 +18,7 @@ const Contact = () => {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
@@ -24,22 +29,22 @@ const Contact = () => {
       label: 'Email',
       value: 'aquifzubair@gmail.com',
       href: 'mailto:aquifzubair@gmail.com',
-      color: 'text-blue-600 dark:text-blue-400'
+      color: 'text-blue-600 dark:text-blue-400',
     },
     {
       icon: HiPhone,
       label: 'Phone',
       value: '+91 9140181089',
       href: 'tel:+919140181089',
-      color: 'text-green-600 dark:text-green-400'
+      color: 'text-green-600 dark:text-green-400',
     },
     {
       icon: HiLocationMarker,
       label: 'Location',
       value: 'Bangalore, India',
       href: '#',
-      color: 'text-purple-600 dark:text-purple-400'
-    }
+      color: 'text-purple-600 dark:text-purple-400',
+    },
   ];
 
   const socialLinks = [
@@ -47,62 +52,64 @@ const Contact = () => {
       name: 'LinkedIn',
       icon: FaLinkedin,
       url: 'https://www.linkedin.com/in/aquif-zubair/',
-      color: 'hover:text-blue-600'
+      color: 'hover:text-blue-600',
     },
     {
       name: 'GitHub',
       icon: FaGithub,
       url: 'https://github.com/aquifzubair',
-      color: 'hover:text-gray-900 dark:hover:text-white'
+      color: 'hover:text-gray-900 dark:hover:text-white',
     },
     {
       name: 'Twitter',
       icon: FaTwitter,
       url: '#',
-      color: 'hover:text-blue-400'
-    }
+      color: 'hover:text-blue-400',
+    },
   ];
 
-  const handleInputChange = (e) => {
+  const handleInputChange = e => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async e => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
         subject: formData.subject,
         message: formData.message,
-        to_email: 'aquifzubair@gmail.com'
+        to_email: 'aquifzubair@gmail.com',
       };
 
-      // Check if EmailJS is configured
-      if (emailjsConfig.serviceId === 'YOUR_SERVICE_ID' || 
-          emailjsConfig.templateId === 'YOUR_TEMPLATE_ID' || 
-          emailjsConfig.publicKey === 'YOUR_PUBLIC_KEY') {
-        
-        // EmailJS not configured - show instructions
+      if (
+        emailjsConfig.serviceId === 'YOUR_SERVICE_ID' ||
+        emailjsConfig.templateId === 'YOUR_TEMPLATE_ID' ||
+        emailjsConfig.publicKey === 'YOUR_PUBLIC_KEY'
+      ) {
         console.log('📧 EmailJS Configuration Required:');
-        console.log('1. Go to https://www.emailjs.com/ and create a free account');
+        console.log(
+          '1. Go to https://www.emailjs.com/ and create a free account'
+        );
         console.log('2. Create a new service (Gmail, Outlook, etc.)');
-        console.log('3. Create an email template with variables: {{from_name}}, {{from_email}}, {{subject}}, {{message}}, {{to_email}}');
-        console.log('4. Update src/config/emailjs.js with your actual credentials');
+        console.log(
+          '3. Create an email template with variables: {{from_name}}, {{from_email}}, {{subject}}, {{message}}, {{to_email}}'
+        );
+        console.log(
+          '4. Update src/config/emailjs.js with your actual credentials'
+        );
         console.log('5. Form data that would be sent:', templateParams);
-        
-        // Simulate for now
+
         await new Promise(resolve => setTimeout(resolve, 2000));
         setSubmitStatus('success');
-        
       } else {
-        // EmailJS is configured - send actual email
         await emailjs.send(
           emailjsConfig.serviceId,
           emailjsConfig.templateId,
@@ -111,9 +118,8 @@ const Contact = () => {
         );
         setSubmitStatus('success');
       }
-      
+
       setFormData({ name: '', email: '', subject: '', message: '' });
-      
     } catch (error) {
       console.error('Email sending failed:', error);
       setSubmitStatus('error');
@@ -157,21 +163,20 @@ const Contact = () => {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {/* Contact Information */}
         <motion.div variants={itemVariants}>
           <Card className="h-full">
             <CardHeader>
               <CardTitle className="text-2xl">Let's Connect</CardTitle>
             </CardHeader>
-            
+
             <CardBody>
               <p className="text-gray-600 dark:text-gray-300 mb-8">
-                I'm always interested in hearing about new projects and opportunities. 
-                Whether you're a company looking to hire, or you're a fellow developer 
-                wanting to collaborate, I'd love to hear from you.
+                I'm always interested in hearing about new projects and
+                opportunities. Whether you're a company looking to hire, or
+                you're a fellow developer wanting to collaborate, I'd love to
+                hear from you.
               </p>
 
-              {/* Contact Details */}
               <div className="space-y-6 mb-8">
                 {contactInfo.map((contact, index) => (
                   <motion.div
@@ -182,11 +187,15 @@ const Contact = () => {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <div className={`w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center ${contact.color}`}>
+                    <div
+                      className={`w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center ${contact.color}`}
+                    >
                       <contact.icon className="h-6 w-6" />
                     </div>
                     <div>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">{contact.label}</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">
+                        {contact.label}
+                      </p>
                       {contact.href !== '#' ? (
                         <a
                           href={contact.href}
@@ -195,14 +204,15 @@ const Contact = () => {
                           {contact.value}
                         </a>
                       ) : (
-                        <p className="text-gray-900 dark:text-white font-medium">{contact.value}</p>
+                        <p className="text-gray-900 dark:text-white font-medium">
+                          {contact.value}
+                        </p>
                       )}
                     </div>
                   </motion.div>
                 ))}
               </div>
 
-              {/* Social Links */}
               <div>
                 <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                   Follow Me
@@ -224,23 +234,24 @@ const Contact = () => {
                   ))}
                 </div>
               </div>
-
             </CardBody>
           </Card>
         </motion.div>
 
-        {/* Contact Form */}
         <motion.div variants={itemVariants}>
           <Card className="h-full">
             <CardHeader>
               <CardTitle className="text-2xl">Send Message</CardTitle>
             </CardHeader>
-            
+
             <CardBody>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    >
                       Name *
                     </label>
                     <input
@@ -254,9 +265,12 @@ const Contact = () => {
                       placeholder="Your name"
                     />
                   </div>
-                  
+
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    >
                       Email *
                     </label>
                     <input
@@ -273,7 +287,10 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  >
                     Subject *
                   </label>
                   <input
@@ -289,7 +306,10 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  >
                     Message *
                   </label>
                   <textarea
@@ -315,7 +335,6 @@ const Contact = () => {
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
 
-                {/* Status Messages */}
                 {submitStatus === 'success' && (
                   <motion.div
                     className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg"
@@ -335,7 +354,8 @@ const Contact = () => {
                     animate={{ opacity: 1, y: 0 }}
                   >
                     <p className="text-red-800 dark:text-red-200 font-medium">
-                      Something went wrong. Please try again or contact me directly.
+                      Something went wrong. Please try again or contact me
+                      directly.
                     </p>
                   </motion.div>
                 )}

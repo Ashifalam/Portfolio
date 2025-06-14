@@ -18,7 +18,7 @@ const About = () => {
     'Led teams of 5+ developers across multiple projects',
     'Optimized database queries improving performance by 40%',
     'Implemented enterprise SSO solutions (Azure, Okta)',
-    'Built scalable backend systems handling millions of requests'
+    'Built scalable backend systems handling millions of requests',
   ];
 
   return (
@@ -40,25 +40,28 @@ const About = () => {
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
             Building the Future, One Line of Code at a Time
           </h3>
-          
+
           <div className="space-y-4 text-gray-600 dark:text-gray-300">
             <p>
-              I'm a passionate Software Engineer with over 5 years of experience specializing in 
-              backend development and system architecture. Currently working at Leucine Tech, 
-              I focus on building scalable microservices and implementing enterprise-level solutions.
+              I'm a passionate Software Engineer with over 5 years of experience
+              specializing in backend development and system architecture.
+              Currently working at Leucine Tech, I focus on building scalable
+              microservices and implementing enterprise-level solutions.
             </p>
-            
+
             <p>
-              My journey in software development has taken me through various domains, from 
-              e-commerce platforms to enterprise applications. I have a proven track record of 
-              optimizing system performance, leading development teams, and delivering high-quality 
-              software solutions that drive business growth.
+              My journey in software development has taken me through various
+              domains, from e-commerce platforms to enterprise applications. I
+              have a proven track record of optimizing system performance,
+              leading development teams, and delivering high-quality software
+              solutions that drive business growth.
             </p>
-            
+
             <p>
-              When I'm not coding, I enjoy exploring new technologies, contributing to open-source 
-              projects, and mentoring junior developers. I believe in continuous learning and 
-              staying updated with the latest industry trends.
+              When I'm not coding, I enjoy exploring new technologies,
+              contributing to open-source projects, and mentoring junior
+              developers. I believe in continuous learning and staying updated
+              with the latest industry trends.
             </p>
           </div>
 
@@ -78,7 +81,9 @@ const About = () => {
                   viewport={{ once: true }}
                 >
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-600 dark:text-gray-300">{highlight}</span>
+                  <span className="text-gray-600 dark:text-gray-300">
+                    {highlight}
+                  </span>
                 </motion.li>
               ))}
             </ul>

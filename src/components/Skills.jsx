@@ -1,6 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SiNodedotjs, SiPostgresql, SiJavascript, SiTypescript, SiReact, SiExpress, SiRedis, SiDocker, SiGit, SiMongodb, SiApachekafka } from 'react-icons/si';
+import {
+  SiNodedotjs,
+  SiPostgresql,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiExpress,
+  SiRedis,
+  SiDocker,
+  SiGit,
+  SiMongodb,
+  SiApachekafka,
+} from 'react-icons/si';
 import { HiServer, HiDatabase, HiCode, HiCog, HiCloud } from 'react-icons/hi';
 import Section, { SectionHeader } from './Section';
 import Card, { CardBody, CardHeader, CardTitle } from './Card';
@@ -10,7 +22,8 @@ const Skills = () => {
     {
       title: 'Backend Development',
       icon: HiServer,
-      color: 'bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400',
+      color:
+        'bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400',
       skills: [
         { name: 'Node.js', icon: SiNodedotjs, level: 95 },
         { name: 'Express.js', icon: SiExpress, level: 90 },
@@ -18,7 +31,7 @@ const Skills = () => {
         { name: 'JavaScript', icon: SiJavascript, level: 95 },
         { name: 'TypeScript', icon: SiTypescript, level: 85 },
         { name: 'Kafka', icon: SiApachekafka, level: 70 },
-      ]
+      ],
     },
     {
       title: 'Databases',
@@ -29,28 +42,30 @@ const Skills = () => {
         { name: 'Redis', icon: SiRedis, level: 80 },
         { name: 'MySQL', icon: SiPostgresql, level: 85 },
         { name: 'MongoDB', icon: SiMongodb, level: 60 },
-      ]
+      ],
     },
     {
       title: 'Frontend Development',
       icon: HiCode,
-      color: 'bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-400',
+      color:
+        'bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-400',
       skills: [
         { name: 'React.js', icon: SiReact, level: 80 },
         { name: 'JavaScript', icon: SiJavascript, level: 90 },
         { name: 'TypeScript', icon: SiTypescript, level: 75 },
-      ]
+      ],
     },
     {
       title: 'DevOps & Tools',
       icon: HiCog,
-      color: 'bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-400',
+      color:
+        'bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-400',
       skills: [
         { name: 'Docker', icon: SiDocker, level: 75 },
         { name: 'AWS', icon: HiCloud, level: 70 },
         { name: 'Git', icon: SiGit, level: 90 },
-      ]
-    }
+      ],
+    },
   ];
 
   const containerVariants = {
@@ -92,13 +107,15 @@ const Skills = () => {
             <Card className="h-full">
               <CardHeader>
                 <div className="flex items-center space-x-3">
-                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${category.color}`}>
+                  <div
+                    className={`w-12 h-12 rounded-lg flex items-center justify-center ${category.color}`}
+                  >
                     <category.icon className="h-6 w-6" />
                   </div>
                   <CardTitle>{category.title}</CardTitle>
                 </div>
               </CardHeader>
-              
+
               <CardBody>
                 <div className="space-y-6">
                   {category.skills.map((skill, skillIndex) => (
@@ -114,7 +131,7 @@ const Skills = () => {
                           {skill.level}%
                         </span>
                       </div>
-                      
+
                       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                         <motion.div
                           className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full"
@@ -147,15 +164,22 @@ const Skills = () => {
               Core Expertise
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-3xl mx-auto">
-              Specialized in building scalable backend systems with Node.js and PostgreSQL. 
-              Experienced in microservices architecture, API development, database optimization, 
-              and enterprise-level integrations.
+              Specialized in building scalable backend systems with Node.js and
+              PostgreSQL. Experienced in microservices architecture, API
+              development, database optimization, and enterprise-level
+              integrations.
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                'Microservices', 'API Development', 'Database Design', 'Performance Optimization',
-                'System Architecture', 'Code Reviews', 'Team Leadership', 'Agile Development'
+                'Microservices',
+                'API Development',
+                'Database Design',
+                'Performance Optimization',
+                'System Architecture',
+                'Code Reviews',
+                'Team Leadership',
+                'Agile Development',
               ].map((skill, index) => (
                 <motion.span
                   key={index}

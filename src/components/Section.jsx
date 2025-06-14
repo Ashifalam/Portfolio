@@ -2,14 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const Section = ({ 
-  id, 
-  children, 
-  className = '', 
+const Section = ({
+  id,
+  children,
+  className = '',
   background = 'bg-white dark:bg-secondary-900',
   padding = 'section-padding',
   container = true,
-  ...props 
+  ...props
 }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -47,12 +47,12 @@ const Section = ({
 };
 
 // Section Header Component
-export const SectionHeader = ({ 
-  title, 
-  subtitle, 
-  description, 
+export const SectionHeader = ({
+  title,
+  subtitle,
+  description,
   centered = true,
-  className = '' 
+  className = '',
 }) => (
   <div className={`${centered ? 'text-center' : ''} mb-12 ${className}`}>
     {subtitle && (
@@ -66,7 +66,7 @@ export const SectionHeader = ({
         {subtitle}
       </motion.p>
     )}
-    
+
     <motion.h2
       className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-900 dark:text-white mb-4"
       initial={{ opacity: 0, y: 20 }}
@@ -76,7 +76,7 @@ export const SectionHeader = ({
     >
       {title}
     </motion.h2>
-    
+
     {description && (
       <motion.p
         className="text-lg text-secondary-600 dark:text-secondary-300 max-w-3xl mx-auto"

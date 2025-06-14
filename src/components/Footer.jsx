@@ -11,38 +11,38 @@ const Footer = () => {
       name: 'LinkedIn',
       icon: FaLinkedin,
       url: 'https://www.linkedin.com/in/aquif-zubair-167b23155/',
-      color: 'hover:text-blue-600'
+      color: 'hover:text-blue-600',
     },
     {
       name: 'GitHub',
       icon: FaGithub,
       url: 'https://github.com/aquifzubair',
-      color: 'hover:text-gray-900 dark:hover:text-white'
+      color: 'hover:text-gray-900 dark:hover:text-white',
     },
     {
       name: 'Twitter',
       icon: FaTwitter,
       url: '#',
-      color: 'hover:text-blue-400'
-    }
+      color: 'hover:text-blue-400',
+    },
   ];
 
   const contactInfo = [
     {
       icon: HiMail,
       text: 'aquifzubair@gmail.com',
-      href: 'mailto:aquifzubair@gmail.com'
+      href: 'mailto:aquifzubair@gmail.com',
     },
     {
       icon: HiPhone,
       text: '+91 9140181089',
-      href: 'tel:+919140181089'
+      href: 'tel:+919140181089',
     },
     {
       icon: HiLocationMarker,
       text: 'Bangalore, India',
-      href: '#'
-    }
+      href: '#',
+    },
   ];
 
   const quickLinks = [
@@ -51,10 +51,10 @@ const Footer = () => {
     { name: 'Skills', href: '#skills' },
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Contact', href: '#contact' },
   ];
 
-  const scrollToSection = (href) => {
+  const scrollToSection = href => {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -77,14 +77,14 @@ const Footer = () => {
               Aquif Zubair
             </h3>
             <p className="text-secondary-300 mb-6 max-w-md">
-              Software Engineer specializing in building scalable backend solutions 
-              and robust applications. Passionate about creating efficient systems 
-              that drive business growth.
+              Software Engineer specializing in building scalable backend
+              solutions and robust applications. Passionate about creating
+              efficient systems that drive business growth.
             </p>
-            
+
             {/* Social Links */}
             <div className="flex space-x-4">
-              {socialLinks.map((social) => (
+              {socialLinks.map(social => (
                 <motion.a
                   key={social.name}
                   href={social.url}
@@ -110,7 +110,7 @@ const Footer = () => {
           >
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {quickLinks.map((link) => (
+              {quickLinks.map(link => (
                 <li key={link.name}>
                   <button
                     onClick={() => scrollToSection(link.href)}
@@ -162,7 +162,7 @@ const Footer = () => {
           <p className="text-secondary-400 text-sm mb-4 md:mb-0">
             © {currentYear} Aquif Zubair. All rights reserved.
           </p>
-          
+
           <div className="flex space-x-6 text-sm">
             <button className="text-secondary-400 hover:text-primary-400 transition-colors duration-200">
               Privacy Policy

@@ -17,9 +17,16 @@ const Experience = () => {
         'Successfully implemented Azure and Okta Single Sign-On (SSO) solutions, enhancing security and ease of access for users',
         'Integrated Redis across the application to optimize API response time and enhance performance',
         'Spearheaded several query optimization projects in PostgreSQL, significantly reducing response times and enhancing overall system performance',
-        'Played a crucial role in code reviews, providing constructive feedback to team members and maintaining code quality standards'
+        'Played a crucial role in code reviews, providing constructive feedback to team members and maintaining code quality standards',
       ],
-      technologies: ['Node.js', 'PostgreSQL', 'Redis', 'Azure', 'Okta', 'QuickSight']
+      technologies: [
+        'Node.js',
+        'PostgreSQL',
+        'Redis',
+        'Azure',
+        'Okta',
+        'QuickSight',
+      ],
     },
     {
       company: 'Zopsmart',
@@ -31,9 +38,15 @@ const Experience = () => {
         'Developed scalable Node.js microservices for McAfee',
         'Designed and implemented data layer using Postgres and Knex as the ORM',
         'Collaborated with the client and other team members to turn requirements into code and deliver high-quality software on time',
-        'Leading a team of five junior developers, providing technical guidance and training to ensure successful project completion'
+        'Leading a team of five junior developers, providing technical guidance and training to ensure successful project completion',
       ],
-      technologies: ['Node.js', 'PostgreSQL', 'Knex.js', 'Microservices', 'Team Leadership']
+      technologies: [
+        'Node.js',
+        'PostgreSQL',
+        'Knex.js',
+        'Microservices',
+        'Team Leadership',
+      ],
     },
     {
       company: 'Lal10',
@@ -46,9 +59,16 @@ const Experience = () => {
         'Designed efficient MySQL schemas and optimized queries',
         'Developed APIs for integration with payment gateways and third-party systems',
         'Created a rule engine matching products to artisans based on skills, availability, and cost',
-        'Developed and deployed multiple microservices using Java Spring Boot'
+        'Developed and deployed multiple microservices using Java Spring Boot',
       ],
-      technologies: ['Node.js', 'Express.js', 'MySQL', 'Java', 'Spring Boot', 'Payment Gateways']
+      technologies: [
+        'Node.js',
+        'Express.js',
+        'MySQL',
+        'Java',
+        'Spring Boot',
+        'Payment Gateways',
+      ],
     },
     {
       company: 'Mountblue',
@@ -60,9 +80,15 @@ const Experience = () => {
         'Developed a Spotify clone using React, Redux, Express, and MySQL',
         'Built a Project Issue Tracker with full-stack capabilities',
         'Gained extensive experience in full-stack development',
-        'Worked effectively in an agile development environment'
+        'Worked effectively in an agile development environment',
       ],
-      technologies: ['React', 'Redux', 'Express.js', 'MySQL', 'Full-stack Development']
+      technologies: [
+        'React',
+        'Redux',
+        'Express.js',
+        'MySQL',
+        'Full-stack Development',
+      ],
     },
     {
       company: 'LiftOff',
@@ -74,10 +100,10 @@ const Experience = () => {
         'Developed authentication and profile features using React and Firebase',
         'Completed Data Structures and Algorithms certification from FreeCodeCamp',
         'Developed responsive and user-friendly frontend interfaces',
-        'Collaborated with team members to implement best practices'
+        'Collaborated with team members to implement best practices',
       ],
-      technologies: ['React', 'Firebase', 'JavaScript', 'Frontend Development']
-    }
+      technologies: ['React', 'Firebase', 'JavaScript', 'Frontend Development'],
+    },
   ];
 
   const containerVariants = {
@@ -126,13 +152,15 @@ const Experience = () => {
             >
               {/* Timeline dot */}
               <div className="absolute left-6 w-4 h-4 bg-blue-600 rounded-full border-4 border-white dark:border-gray-900 hidden md:block"></div>
-              
+
               <div className="md:ml-16">
                 <Card className="hover:shadow-xl transition-shadow duration-300">
                   <CardHeader>
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                       <div>
-                        <CardTitle className="text-xl mb-1">{exp.position}</CardTitle>
+                        <CardTitle className="text-xl mb-1">
+                          {exp.position}
+                        </CardTitle>
                         <div className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 font-semibold">
                           <HiOfficeBuilding className="h-4 w-4" />
                           <span>{exp.company}</span>
@@ -155,7 +183,10 @@ const Experience = () => {
                     <div className="space-y-4">
                       <ul className="space-y-2">
                         {exp.achievements.map((achievement, achIndex) => (
-                          <li key={achIndex} className="flex items-start space-x-3">
+                          <li
+                            key={achIndex}
+                            className="flex items-start space-x-3"
+                          >
                             <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
                             <span className="text-gray-600 dark:text-gray-300 text-sm">
                               {achievement}
@@ -198,22 +229,32 @@ const Experience = () => {
       >
         <Card className="text-center p-6">
           <CardBody>
-            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">5+</div>
-            <div className="text-gray-600 dark:text-gray-300">Years Experience</div>
+            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+              5+
+            </div>
+            <div className="text-gray-600 dark:text-gray-300">
+              Years Experience
+            </div>
           </CardBody>
         </Card>
-        
+
         <Card className="text-center p-6">
           <CardBody>
-            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">5</div>
+            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+              5
+            </div>
             <div className="text-gray-600 dark:text-gray-300">Companies</div>
           </CardBody>
         </Card>
-        
+
         <Card className="text-center p-6">
           <CardBody>
-            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">20+</div>
-            <div className="text-gray-600 dark:text-gray-300">Projects Delivered</div>
+            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+              20+
+            </div>
+            <div className="text-gray-600 dark:text-gray-300">
+              Projects Delivered
+            </div>
           </CardBody>
         </Card>
       </motion.div>

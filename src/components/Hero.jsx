@@ -6,24 +6,24 @@ import Button from './Button';
 
 const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0);
-  
+
   const roles = [
     'Software Engineer',
     'Backend Developer',
     'Node.js Expert',
     'System Architect',
-    'Full Stack Developer'
+    'Full Stack Developer',
   ];
 
   // Typing animation effect
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentRole((prev) => (prev + 1) % roles.length);
+      setCurrentRole(prev => (prev + 1) % roles.length);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = sectionId => {
     const element = document.querySelector(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -70,10 +70,7 @@ const Hero = () => {
           animate="visible"
         >
           {/* Profile Image */}
-          <motion.div
-            className="mb-8"
-            variants={itemVariants}
-          >
+          <motion.div className="mb-8" variants={itemVariants}>
             <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full bg-gradient-to-r from-primary-500 to-accent-500 p-1 shadow-2xl">
               <div className="w-full h-full rounded-full bg-secondary-100 dark:bg-secondary-800 flex items-center justify-center">
                 <span className="text-4xl md:text-5xl font-bold text-primary-600 dark:text-primary-400">
@@ -100,10 +97,7 @@ const Hero = () => {
           </motion.h1>
 
           {/* Dynamic Role */}
-          <motion.div
-            className="mb-8"
-            variants={itemVariants}
-          >
+          <motion.div className="mb-8" variants={itemVariants}>
             <p className="text-xl md:text-2xl lg:text-3xl text-secondary-700 dark:text-secondary-300">
               I'm a{' '}
               <motion.span
@@ -124,9 +118,10 @@ const Hero = () => {
             className="text-lg md:text-xl text-secondary-600 dark:text-secondary-300 max-w-3xl mx-auto mb-12 leading-relaxed"
             variants={itemVariants}
           >
-            Passionate about building scalable backend solutions and robust applications. 
-            Specializing in Node.js, PostgreSQL, and microservices architecture with 5+ years 
-            of experience delivering high-performance systems.
+            Passionate about building scalable backend solutions and robust
+            applications. Specializing in Node.js, PostgreSQL, and microservices
+            architecture with 5+ years of experience delivering high-performance
+            systems.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -142,7 +137,7 @@ const Hero = () => {
             >
               View My Work
             </Button>
-            
+
             <Button
               variant="outline"
               size="lg"
@@ -177,7 +172,7 @@ const Hero = () => {
               <FaLinkedin className="h-8 w-8" />
               <span className="sr-only">LinkedIn</span>
             </motion.a>
-            
+
             <motion.a
               href="https://github.com/aquifzubair"
               target="_blank"
@@ -189,7 +184,7 @@ const Hero = () => {
               <FaGithub className="h-8 w-8" />
               <span className="sr-only">GitHub</span>
             </motion.a>
-            
+
             <motion.a
               href="mailto:aquifzubair@gmail.com"
               className="text-secondary-600 dark:text-secondary-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"

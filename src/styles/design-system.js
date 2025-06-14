@@ -165,9 +165,12 @@ export const designSystem = {
         xl: 'px-8 py-4 text-xl',
       },
       variants: {
-        primary: 'bg-primary-600 hover:bg-primary-700 text-white focus:ring-primary-500',
-        secondary: 'bg-secondary-200 hover:bg-secondary-300 text-secondary-800 focus:ring-secondary-500',
-        outline: 'border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white focus:ring-primary-500',
+        primary:
+          'bg-primary-600 hover:bg-primary-700 text-white focus:ring-primary-500',
+        secondary:
+          'bg-secondary-200 hover:bg-secondary-300 text-secondary-800 focus:ring-secondary-500',
+        outline:
+          'border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white focus:ring-primary-500',
         ghost: 'text-primary-600 hover:bg-primary-50 focus:ring-primary-500',
         danger: 'bg-red-600 hover:bg-red-700 text-white focus:ring-red-500',
       },
@@ -176,7 +179,8 @@ export const designSystem = {
       base: 'rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300',
       variants: {
         default: 'bg-white dark:bg-secondary-800',
-        bordered: 'bg-white dark:bg-secondary-800 border border-secondary-200 dark:border-secondary-700',
+        bordered:
+          'bg-white dark:bg-secondary-800 border border-secondary-200 dark:border-secondary-700',
         elevated: 'bg-white dark:bg-secondary-800 shadow-2xl',
       },
     },
@@ -188,7 +192,8 @@ export const designSystem = {
         lg: 'px-4 py-3 text-lg',
       },
       variants: {
-        default: 'border-secondary-300 focus:border-primary-500 focus:ring-primary-500',
+        default:
+          'border-secondary-300 focus:border-primary-500 focus:ring-primary-500',
         error: 'border-red-300 focus:border-red-500 focus:ring-red-500',
         success: 'border-green-300 focus:border-green-500 focus:ring-green-500',
       },

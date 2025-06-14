@@ -1,6 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { HiAcademicCap, HiCalendar, HiLocationMarker, HiStar } from 'react-icons/hi';
+import {
+  HiAcademicCap,
+  HiCalendar,
+  HiLocationMarker,
+  HiStar,
+} from 'react-icons/hi';
 import Section, { SectionHeader } from './Section';
 import Card, { CardBody, CardHeader, CardTitle } from './Card';
 
@@ -17,7 +22,7 @@ const Education = () => {
         'Graduated with distinction (7.2 CGPA)',
         'Specialized in Computer Science and Engineering',
         'Strong foundation in algorithms and data structures',
-        'Participated in coding competitions and hackathons'
+        'Participated in coding competitions and hackathons',
       ],
       subjects: [
         'Data Structures & Algorithms',
@@ -25,8 +30,8 @@ const Education = () => {
         'Software Engineering',
         'Computer Networks',
         'Operating Systems',
-        'Web Technologies'
-      ]
+        'Web Technologies',
+      ],
     },
     {
       institution: 'University Polytechnic, Aligarh Muslim University',
@@ -39,7 +44,7 @@ const Education = () => {
         'Graduated with distinction (76.6%)',
         'Strong foundation in electronics and engineering principles',
         'Hands-on experience with electronic circuits and systems',
-        'Developed problem-solving and analytical skills'
+        'Developed problem-solving and analytical skills',
       ],
       subjects: [
         'Electronic Circuits',
@@ -47,9 +52,9 @@ const Education = () => {
         'Microprocessors',
         'Communication Systems',
         'Control Systems',
-        'Engineering Mathematics'
-      ]
-    }
+        'Engineering Mathematics',
+      ],
+    },
   ];
 
   const certifications = [
@@ -58,29 +63,29 @@ const Education = () => {
       provider: 'FreeCodeCamp',
       year: '2020',
       type: 'Certification',
-      skills: ['Algorithms', 'Data Structures', 'Problem Solving']
+      skills: ['Algorithms', 'Data Structures', 'Problem Solving'],
     },
     {
       title: 'Node.js Development',
       provider: 'Professional Experience',
       year: '2019-Present',
       type: 'Professional',
-      skills: ['Node.js', 'Express.js', 'API Development']
+      skills: ['Node.js', 'Express.js', 'API Development'],
     },
     {
       title: 'PostgreSQL Database Administration',
       provider: 'Professional Experience',
       year: '2020-Present',
       type: 'Professional',
-      skills: ['PostgreSQL', 'Database Design', 'Query Optimization']
+      skills: ['PostgreSQL', 'Database Design', 'Query Optimization'],
     },
     {
       title: 'Microservices Architecture',
       provider: 'Professional Experience',
       year: '2021-Present',
       type: 'Professional',
-      skills: ['Microservices', 'System Design', 'Scalability']
-    }
+      skills: ['Microservices', 'System Design', 'Scalability'],
+    },
   ];
 
   const containerVariants = {
@@ -121,7 +126,7 @@ const Education = () => {
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
             Formal Education
           </h3>
-          
+
           <div className="space-y-8">
             {education.map((edu, index) => (
               <motion.div key={index} variants={itemVariants}>
@@ -129,7 +134,9 @@ const Education = () => {
                   <CardHeader>
                     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                       <div className="flex-1">
-                        <CardTitle className="text-xl mb-2">{edu.degree}</CardTitle>
+                        <CardTitle className="text-xl mb-2">
+                          {edu.degree}
+                        </CardTitle>
                         <div className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 font-semibold mb-2">
                           <HiAcademicCap className="h-5 w-5" />
                           <span>{edu.institution}</span>
@@ -145,7 +152,7 @@ const Education = () => {
                           </div>
                         </div>
                       </div>
-                      
+
                       <div className="mt-4 lg:mt-0 text-right">
                         <div className="flex items-center justify-end space-x-2 mb-1">
                           <HiStar className="h-5 w-5 text-yellow-500" />
@@ -169,7 +176,10 @@ const Education = () => {
                         </h4>
                         <ul className="space-y-2">
                           {edu.achievements.map((achievement, achIndex) => (
-                            <li key={achIndex} className="flex items-start space-x-3">
+                            <li
+                              key={achIndex}
+                              className="flex items-start space-x-3"
+                            >
                               <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
                               <span className="text-gray-600 dark:text-gray-300 text-sm">
                                 {achievement}
@@ -213,7 +223,7 @@ const Education = () => {
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
             Certifications & Professional Development
           </h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {certifications.map((cert, index) => (
               <motion.div key={index} variants={itemVariants}>
@@ -229,11 +239,13 @@ const Education = () => {
                         </p>
                       </div>
                       <div className="text-right">
-                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                          cert.type === 'Certification' 
-                            ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
-                            : 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200'
-                        }`}>
+                        <span
+                          className={`px-2 py-1 rounded-full text-xs font-medium ${
+                            cert.type === 'Certification'
+                              ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
+                              : 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200'
+                          }`}
+                        >
                           {cert.type}
                         </span>
                         <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
@@ -241,7 +253,7 @@ const Education = () => {
                         </p>
                       </div>
                     </div>
-                    
+
                     <div className="flex flex-wrap gap-2">
                       {cert.skills.map((skill, skillIndex) => (
                         <span
@@ -273,11 +285,13 @@ const Education = () => {
                 Continuous Learning
               </h3>
               <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                I believe in continuous learning and staying updated with the latest technologies. 
-                My educational foundation in Computer Science, combined with hands-on professional 
-                experience, has equipped me with both theoretical knowledge and practical skills. 
-                I regularly participate in online courses, workshops, and tech conferences to 
-                enhance my expertise and stay current with industry trends.
+                I believe in continuous learning and staying updated with the
+                latest technologies. My educational foundation in Computer
+                Science, combined with hands-on professional experience, has
+                equipped me with both theoretical knowledge and practical
+                skills. I regularly participate in online courses, workshops,
+                and tech conferences to enhance my expertise and stay current
+                with industry trends.
               </p>
             </CardBody>
           </Card>

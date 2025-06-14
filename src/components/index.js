@@ -1,6 +1,13 @@
 // Core Components
 export { default as Button } from './Button';
-export { default as Card, CardHeader, CardBody, CardFooter, CardTitle, CardDescription } from './Card';
+export {
+  default as Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+} from './Card';
 export { default as Navigation } from './Navigation';
 export { default as Footer } from './Footer';
 export { default as Section, SectionHeader } from './Section';
@@ -15,4 +22,9 @@ export { default as Education } from './Education';
 export { default as Contact } from './Contact';
 
 // Re-export design system utilities
-export { getButtonClasses, getCardClasses, getInputClasses, animations } from '../styles/design-system';
+export {
+  getButtonClasses,
+  getCardClasses,
+  getInputClasses,
+  animations,
+} from '../styles/design-system';
