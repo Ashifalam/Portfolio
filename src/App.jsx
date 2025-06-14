@@ -25,12 +25,12 @@ function App() {
       threshold: 0,
     };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
           const sectionId = entry.target.id;
           const sectionKey = sectionId === 'home' ? 'home' : sectionId;
-          
+
           if (seoData[sectionKey]) {
             updateSEO(seoData[sectionKey]);
           }
@@ -38,10 +38,10 @@ function App() {
       });
     }, observerOptions);
 
-    sections.forEach((section) => observer.observe(section));
+    sections.forEach(section => observer.observe(section));
 
     return () => {
-      sections.forEach((section) => observer.unobserve(section));
+      sections.forEach(section => observer.unobserve(section));
     };
   }, []);
 
