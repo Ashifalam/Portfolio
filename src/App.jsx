@@ -1,6 +1,14 @@
 import { useEffect } from 'react';
 import { Navigation, Footer, Hero } from './components';
-import { LazySection, About, Skills, Experience, Projects, Education, Contact } from './components/LazySection';
+import {
+  LazySection,
+  About,
+  Skills,
+  Experience,
+  Projects,
+  Education,
+  Contact,
+} from './components/LazySection';
 import { updateSEO, seoData } from './utils/seo';
 
 function App() {

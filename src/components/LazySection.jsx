@@ -11,7 +11,9 @@ const Contact = lazy(() => import('./Contact'));
 
 // Loading component with skeleton
 const SectionSkeleton = ({ height = 'h-96' }) => (
-  <div className={`${height} bg-gray-100 dark:bg-gray-800 animate-pulse rounded-lg`}>
+  <div
+    className={`${height} bg-gray-100 dark:bg-gray-800 animate-pulse rounded-lg`}
+  >
     <div className="p-8 space-y-4">
       <div className="h-8 bg-gray-200 dark:bg-gray-700 rounded w-1/3"></div>
       <div className="space-y-2">
@@ -32,9 +34,7 @@ const LazySection = ({ children, fallback, threshold = 0.1 }) => {
       viewport={{ once: true, margin: '100px', amount: threshold }}
       transition={{ duration: 0.6 }}
     >
-      <Suspense fallback={fallback || <SectionSkeleton />}>
-        {children}
-      </Suspense>
+      <Suspense fallback={fallback || <SectionSkeleton />}>{children}</Suspense>
     </motion.div>
   );
 };

@@ -38,7 +38,7 @@ export const updateOpenGraphTags = data => {
 
     const ogTitle = document.querySelector('meta[property="og:title"]');
     const ogDescription = document.querySelector(
-      'meta[property="og:description"]',
+      'meta[property="og:description"]'
     );
     const ogUrl = document.querySelector('meta[property="og:url"]');
     const ogImage = document.querySelector('meta[property="og:image"]');
@@ -56,14 +56,14 @@ export const updateTwitterTags = data => {
     const { title, description, url, image } = data;
 
     const twitterTitle = document.querySelector(
-      'meta[property="twitter:title"]',
+      'meta[property="twitter:title"]'
     );
     const twitterDescription = document.querySelector(
-      'meta[property="twitter:description"]',
+      'meta[property="twitter:description"]'
     );
     const twitterUrl = document.querySelector('meta[property="twitter:url"]');
     const twitterImage = document.querySelector(
-      'meta[property="twitter:image"]',
+      'meta[property="twitter:image"]'
     );
 
     if (twitterTitle && title) twitterTitle.setAttribute('content', title);
@@ -118,7 +118,7 @@ export const seoData = {
   about: {
     section: 'About',
     description:
-      'Learn about Aquif Zubair\'s journey as a Software Engineer, passion for backend development, and 5+ years of experience building scalable applications.',
+      "Learn about Aquif Zubair's journey as a Software Engineer, passion for backend development, and 5+ years of experience building scalable applications.",
     keywords:
       'About Aquif Zubair, Software Engineer Background, Backend Developer Experience, Node.js Expert',
     url: 'https://aquifzubair.dev/#about',
@@ -126,7 +126,7 @@ export const seoData = {
   skills: {
     section: 'Skills & Technologies',
     description:
-      'Explore Aquif Zubair\'s technical skills including Node.js, PostgreSQL, React, TypeScript, Microservices, and modern development tools.',
+      "Explore Aquif Zubair's technical skills including Node.js, PostgreSQL, React, TypeScript, Microservices, and modern development tools.",
     keywords:
       'Node.js Skills, PostgreSQL, React, TypeScript, Microservices, Backend Technologies, Software Development Skills',
     url: 'https://aquifzubair.dev/#skills',
@@ -134,7 +134,7 @@ export const seoData = {
   experience: {
     section: 'Work Experience',
     description:
-      'Discover Aquif Zubair\'s professional experience at Leucine Tech, Zopsmart, Lal10, and other companies. 5+ years of backend development expertise.',
+      "Discover Aquif Zubair's professional experience at Leucine Tech, Zopsmart, Lal10, and other companies. 5+ years of backend development expertise.",
     keywords:
       'Software Engineer Experience, Leucine Tech, Zopsmart, Backend Development Career, Node.js Projects',
     url: 'https://aquifzubair.dev/#experience',
@@ -142,7 +142,7 @@ export const seoData = {
   projects: {
     section: 'Projects Portfolio',
     description:
-      'View Aquif Zubair\'s portfolio of 20+ projects including enterprise analytics platforms, SSO systems, microservices, and full-stack applications.',
+      "View Aquif Zubair's portfolio of 20+ projects including enterprise analytics platforms, SSO systems, microservices, and full-stack applications.",
     keywords:
       'Software Projects, Node.js Projects, Enterprise Applications, Microservices Projects, Full Stack Development',
     url: 'https://aquifzubair.dev/#projects',
@@ -150,7 +150,7 @@ export const seoData = {
   education: {
     section: 'Education & Certifications',
     description:
-      'Aquif Zubair\'s educational background including B.E. in Computer Science from SLIET and professional certifications in software development.',
+      "Aquif Zubair's educational background including B.E. in Computer Science from SLIET and professional certifications in software development.",
     keywords:
       'Computer Science Education, SLIET, Software Engineering Degree, Technical Certifications',
     url: 'https://aquifzubair.dev/#education',

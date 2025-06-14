@@ -6,11 +6,6 @@ import {
   HiLocationMarker,
   HiPaperAirplane,
 } from 'react-icons/hi';
-import { 
-  HiOutlineGlobeAlt,
-  HiOutlineCode,
-  HiOutlineChatAlt2
-} from 'react-icons/hi';
 import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 import { emailjsConfig } from '../config/emailjs';
@@ -39,8 +34,8 @@ const Contact = () => {
     {
       icon: HiPhone,
       label: 'Phone',
-      value: '+91 9140181089',
-      href: 'tel:+919140181089',
+      value: '+91 7070742505',
+      href: 'tel:+917070742505',
       color: 'text-green-600 dark:text-green-400',
     },
     {
@@ -101,14 +96,14 @@ const Contact = () => {
       ) {
         console.log('📧 EmailJS Configuration Required:');
         console.log(
-          '1. Go to https://www.emailjs.com/ and create a free account',
+          '1. Go to https://www.emailjs.com/ and create a free account'
         );
         console.log('2. Create a new service (Gmail, Outlook, etc.)');
         console.log(
-          '3. Create an email template with variables: {{from_name}}, {{from_email}}, {{subject}}, {{message}}, {{to_email}}',
+          '3. Create an email template with variables: {{from_name}}, {{from_email}}, {{subject}}, {{message}}, {{to_email}}'
         );
         console.log(
-          '4. Update src/config/emailjs.js with your actual credentials',
+          '4. Update src/config/emailjs.js with your actual credentials'
         );
         console.log('5. Form data that would be sent:', templateParams);
 
@@ -119,7 +114,7 @@ const Contact = () => {
           emailjsConfig.serviceId,
           emailjsConfig.templateId,
           templateParams,
-          emailjsConfig.publicKey,
+          emailjsConfig.publicKey
         );
         setSubmitStatus('success');
       }

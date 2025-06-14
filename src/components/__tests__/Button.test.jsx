@@ -5,7 +5,9 @@ import Button from '../Button';
 describe('Button Component', () => {
   it('renders button with text', () => {
     render(<Button>Click me</Button>);
-    expect(screen.getByRole('button', { name: /click me/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: /click me/i })
+    ).toBeInTheDocument();
   });
 
   it('renders primary variant by default', () => {
@@ -56,7 +58,11 @@ describe('Button Component', () => {
 
   it('does not trigger click when disabled', () => {
     const handleClick = vi.fn();
-    render(<Button onClick={handleClick} disabled>Disabled</Button>);
+    render(
+      <Button onClick={handleClick} disabled>
+        Disabled
+      </Button>
+    );
 
     fireEvent.click(screen.getByRole('button'));
     expect(handleClick).not.toHaveBeenCalled();
