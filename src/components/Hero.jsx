@@ -147,7 +147,14 @@ const Hero = () => {
               variant="outline"
               size="lg"
               icon={HiDownload}
-              onClick={() => window.open('/resume.pdf', '_blank')}
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/Aquif_Zubair_Resume.pdf';
+                link.download = 'Aquif_Zubair_Resume.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
               className="w-full sm:w-auto"
             >
               Download Resume
@@ -160,7 +167,7 @@ const Hero = () => {
             variants={itemVariants}
           >
             <motion.a
-              href="https://www.linkedin.com/in/aquif-zubair-167b23155/"
+              href="https://www.linkedin.com/in/aquif-zubair/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-secondary-600 dark:text-secondary-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"

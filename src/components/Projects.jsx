@@ -243,7 +243,7 @@ const Projects = () => {
               More Projects Available
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-              These are just a few highlights from my portfolio. I have worked on 50+ projects 
+              These are just a few highlights from my portfolio. I have worked on 20+ projects 
               ranging from enterprise applications to personal experiments. Each project has 
               taught me valuable lessons and helped me grow as a developer.
             </p>

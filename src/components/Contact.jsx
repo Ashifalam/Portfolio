@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { HiMail, HiPhone, HiLocationMarker, HiPaperAirplane } from 'react-icons/hi';
 import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 import Section, { SectionHeader } from './Section';
 import Card, { CardBody, CardHeader, CardTitle } from './Card';
 import Button from './Button';
@@ -44,7 +45,7 @@ const Contact = () => {
     {
       name: 'LinkedIn',
       icon: FaLinkedin,
-      url: 'https://www.linkedin.com/in/aquif-zubair-167b23155/',
+      url: 'https://www.linkedin.com/in/aquif-zubair/',
       color: 'hover:text-blue-600'
     },
     {
@@ -73,12 +74,32 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
     try {
+      // EmailJS configuration - you'll need to set up your EmailJS account and replace these values
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: 'aquifzubair@gmail.com'
+      };
+
+      // For now, we'll simulate the email sending
+      // To enable actual email sending, you need to:
+      // 1. Create an EmailJS account at https://www.emailjs.com/
+      // 2. Create a service and template
+      // 3. Replace 'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', 'YOUR_PUBLIC_KEY' with your actual values
+      // 4. Uncomment the line below and comment out the simulation
+      
+      // await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'YOUR_PUBLIC_KEY');
+      
+      // Simulation for now
       await new Promise(resolve => setTimeout(resolve, 2000));
+      
       setSubmitStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
+      console.error('Email sending failed:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);

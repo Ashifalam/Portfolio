@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SiNodedotjs, SiPostgresql, SiJavascript, SiTypescript, SiReact, SiExpress, SiRedis, SiDocker, SiGit, SiMongodb } from 'react-icons/si';
+import { SiNodedotjs, SiPostgresql, SiJavascript, SiTypescript, SiReact, SiExpress, SiRedis, SiDocker, SiGit, SiMongodb, SiApachekafka } from 'react-icons/si';
 import { HiServer, HiDatabase, HiCode, HiCog, HiCloud } from 'react-icons/hi';
 import Section, { SectionHeader } from './Section';
 import Card, { CardBody, CardHeader, CardTitle } from './Card';
@@ -14,8 +14,10 @@ const Skills = () => {
       skills: [
         { name: 'Node.js', icon: SiNodedotjs, level: 95 },
         { name: 'Express.js', icon: SiExpress, level: 90 },
+        { name: 'Koa.js', icon: HiServer, level: 75 },
         { name: 'JavaScript', icon: SiJavascript, level: 95 },
         { name: 'TypeScript', icon: SiTypescript, level: 85 },
+        { name: 'Kafka', icon: SiApachekafka, level: 70 },
       ]
     },
     {

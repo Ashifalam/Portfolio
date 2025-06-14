@@ -7,7 +7,7 @@ import Card, { CardBody } from './Card';
 const About = () => {
   const stats = [
     { icon: HiCode, label: 'Years Experience', value: '5+' },
-    { icon: HiServer, label: 'Projects Completed', value: '50+' },
+    { icon: HiServer, label: 'Projects Completed', value: '20+' },
     { icon: HiDatabase, label: 'Technologies', value: '15+' },
     { icon: HiLightningBolt, label: 'Performance Boost', value: '40%' },
   ];
