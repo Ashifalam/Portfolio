@@ -69,17 +69,6 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
         >
-          {/* Profile Image */}
-          <motion.div className="mb-8" variants={itemVariants}>
-            <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full bg-gradient-to-r from-primary-500 to-accent-500 p-1 shadow-2xl">
-              <div className="w-full h-full rounded-full bg-secondary-100 dark:bg-secondary-800 flex items-center justify-center">
-                <span className="text-4xl md:text-5xl font-bold text-primary-600 dark:text-primary-400">
-                  AZ
-                </span>
-              </div>
-            </div>
-          </motion.div>
-
           {/* Greeting */}
           <motion.p
             className="text-lg md:text-xl text-secondary-600 dark:text-secondary-300 mb-4"
