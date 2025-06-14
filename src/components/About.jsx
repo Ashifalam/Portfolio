@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { HiCode, HiServer, HiDatabase, HiLightningBolt } from 'react-icons/hi';
 import Section, { SectionHeader } from './Section';

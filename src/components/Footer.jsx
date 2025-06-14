@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { HiMail, HiPhone, HiLocationMarker } from 'react-icons/hi';
 import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';

@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { HiCode, HiStar } from 'react-icons/hi';
 import { FaGithub } from 'react-icons/fa';
