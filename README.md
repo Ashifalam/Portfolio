@@ -34,6 +34,18 @@ Visit the live portfolio: [https://aquifzubair.netlify.app/](https://aquifzubair
 - **ESLint** - Code linting with comprehensive rules
 - **Prettier** - Code formatting for consistency
 - **PostCSS** - CSS processing with Autoprefixer
+- **Husky** - Git hooks for code quality enforcement
+- **lint-staged** - Run linters on staged files only
+
+### Testing
+- **Vitest** - Fast unit testing framework
+- **Testing Library** - React component testing utilities
+- **jsdom** - DOM environment for testing
+
+### Code Quality & CI/CD
+- **Git Hooks** - Automated pre-commit and pre-push quality checks
+- **Error Count Limits** - Prevents regression while allowing gradual improvement
+- **Automated Formatting** - Code is automatically formatted on commit
 
 ## 📋 Prerequisites
 
@@ -109,46 +121,130 @@ npm run format       # Format code with Prettier
 npm run format:check # Check code formatting
 ```
 
+### Testing
+```bash
+npm run test         # Run tests in watch mode
+npm run test:run     # Run tests once
+npm run test:ci      # Run tests for CI (verbose output)
+npm run test:coverage # Run tests with coverage report
+npm run test:ui      # Run tests with UI interface
+```
+
 ### Combined Commands
 ```bash
 npm run check        # Check formatting + linting
 npm run fix          # Fix formatting + linting issues
 ```
 
+## 🔒 Git Hooks & Code Quality
+
+This project uses **Husky** and **lint-staged** to enforce code quality standards automatically. The Git hooks ensure that all code meets quality standards before being committed or pushed.
+
+### Pre-commit Hook
+Runs automatically when you commit changes:
+- **ESLint**: Fixes linting issues automatically on staged files
+- **Prettier**: Formats code automatically on staged files
+- **Fast**: Only processes staged files for quick commits
+
+### Pre-push Hook
+Runs automatically when you push to remote:
+- **ESLint**: Checks all files for code quality (max 28 errors allowed)
+- **Prettier**: Verifies all files are properly formatted
+- **Tests**: Runs complete test suite with verbose output
+- **Build**: Ensures the project builds successfully
+
+### Error Count Management
+- **Current ESLint error limit**: 28 errors maximum
+- **Prevents regression**: New errors above the limit will block pushes
+- **Encourages improvement**: Allows current state while promoting error reduction
+- **Clear feedback**: Shows exact error count vs. allowed limit
+
+### Manual Quality Checks
+```bash
+# Run all pre-push checks manually
+npm run lint && npm run format:check && npm run test:ci && npm run build
+
+# Run pre-commit checks manually
+npx lint-staged
+
+# Fix common issues
+npm run fix  # Auto-fix formatting and linting issues
+```
+
+### Bypassing Hooks (Emergency Only)
+```bash
+# Skip pre-commit hook (not recommended)
+git commit -m "message" --no-verify
+
+# Skip pre-push hook (not recommended)
+git push --no-verify
+```
+
+**⚠️ Warning**: Only bypass hooks in emergency situations. Always fix issues properly.
+
+For detailed Git hooks documentation, see [GIT_HOOKS_SETUP.md](GIT_HOOKS_SETUP.md)
+
 ## 📁 Project Structure
 
 ```
 react-portfolio/
+├── .husky/                          # Git hooks configuration
+│   ├── pre-commit                   # Pre-commit quality checks
+│   └── pre-push                     # Pre-push quality checks
 ├── public/
-│   ├── Aquif_Zubair_Resume.pdf
-│   └── vite.svg
+│   ├── Aquif_Zubair_Resume.pdf     # Resume download file
+│   ├── favicon.svg                  # Site favicon
+│   ├── manifest.json               # PWA manifest
+│   ├── robots.txt                  # SEO robots file
+│   ├── sitemap.xml                 # SEO sitemap
+│   ├── sw.js                       # Service worker
+│   └── vite.svg                    # Vite logo
 ├── src/
+│   ├── __tests__/                  # App-level tests
+│   │   └── App.test.jsx
 │   ├── components/
-│   │   ├── About.jsx
-│   │   ├── Button.jsx
-│   │   ├── Card.jsx
-│   │   ├── Contact.jsx
-│   │   ├── Education.jsx
-│   │   ├── Experience.jsx
-│   │   ├── Footer.jsx
-│   │   ├── Hero.jsx
-│   │   ├── Navigation.jsx
-│   │   ├── Projects.jsx
-│   │   ├── Section.jsx
-│   │   ├── Skills.jsx
-│   │   └── index.js
+│   │   ├── __tests__/              # Component tests
+│   │   │   ├── About.test.jsx
+│   │   │   ├── Button.test.jsx
+│   │   │   ├── Card.test.jsx
+│   │   │   ├── Contact.test.jsx
+│   │   │   ├── Hero.test.jsx
+│   │   │   └── Navigation.test.jsx
+│   │   ├── About.jsx               # About section
+│   │   ├── Button.jsx              # Reusable button component
+│   │   ├── Card.jsx                # Reusable card component
+│   │   ├── Contact.jsx             # Contact form & info
+│   │   ├── Education.jsx           # Education section
+│   │   ├── Experience.jsx          # Work experience
+│   │   ├── Footer.jsx              # Site footer
+│   │   ├── Hero.jsx                # Hero/landing section
+│   │   ├── LazySection.jsx         # Lazy loading wrapper
+│   │   ├── Navigation.jsx          # Site navigation
+│   │   ├── Projects.jsx            # Projects showcase
+│   │   ├── Section.jsx             # Reusable section component
+│   │   ├── Skills.jsx              # Skills section
+│   │   └── index.js                # Component exports
 │   ├── config/
-│   │   └── emailjs.js
+│   │   └── emailjs.js              # EmailJS configuration
 │   ├── styles/
-│   │   └── design-system.js
-│   ├── App.jsx
-│   ├── index.css
-│   └── main.jsx
-├── .eslintrc.js
-├── .prettierrc
-├── package.json
-├── tailwind.config.js
-└── vite.config.js
+│   │   └── design-system.js        # Design system constants
+│   ├── test/
+│   │   └── setup.jsx               # Test environment setup
+│   ├── utils/
+│   │   ├── performance.js          # Performance utilities
+│   │   └── seo.js                  # SEO utilities
+│   ├── App.jsx                     # Main app component
+│   ├── index.css                   # Global styles
+│   └── main.jsx                    # App entry point
+├── .eslintrc.js                    # ESLint configuration
+├── .prettierrc                     # Prettier configuration
+├── .prettierignore                 # Prettier ignore rules
+├── EMAIL_SETUP.md                  # EmailJS setup guide
+├── GIT_HOOKS_SETUP.md             # Git hooks documentation
+├── package.json                    # Dependencies & scripts
+├── postcss.config.js              # PostCSS configuration
+├── tailwind.config.js             # Tailwind CSS config
+└── vite.config.js                 # Vite build configuration
 ```
 
 ## 🎨 Customization
@@ -262,9 +358,11 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 📞 Contact
 
 **Aquif Zubair**
+- Phone: +91 7070742505
 - Email: aquifzubair98@gmail.com
 - LinkedIn: [linkedin.com/in/aquif-zubair](https://www.linkedin.com/in/aquif-zubair/)
 - GitHub: [github.com/aquifzubair](https://github.com/aquifzubair)
+- Location: Bangalore, India
 
 ## 🙏 Acknowledgments
 
