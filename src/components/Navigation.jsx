@@ -82,7 +82,9 @@ const Navigation = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? 'bg-white/90 dark:bg-secondary-900/90 backdrop-blur-md shadow-lg'
-          : 'bg-transparent'
+          : isOpen 
+            ? 'bg-white/95 dark:bg-secondary-900/95 backdrop-blur-md shadow-lg'
+            : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -159,20 +161,22 @@ const Navigation = () => {
               {/* Menu */}
               <motion.div
                 ref={menuRef}
-                className="md:hidden absolute top-full left-4 right-4 bg-white dark:bg-secondary-900 shadow-2xl border border-secondary-200 dark:border-secondary-700 rounded-2xl mt-3 overflow-hidden z-50"
+                className="md:hidden absolute top-full left-4 right-4 shadow-2xl border-2 border-secondary-300 dark:border-secondary-600 rounded-2xl mt-3 overflow-hidden z-50"
+                style={{
+                  backgroundColor: isDark ? '#0f172a' : '#ffffff',
+                  opacity: 1,
+                }}
                 initial={{ opacity: 0, y: -20, scale: 0.9 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -20, scale: 0.9 }}
-                transition={{
-                  duration: 0.3,
+                transition={{ 
+                  duration: 0.3, 
                   ease: [0.4, 0.0, 0.2, 1],
-                  type: 'spring',
+                  type: "spring",
                   damping: 25,
-                  stiffness: 300,
+                  stiffness: 300
                 }}
               >
-                {/* Subtle gradient border effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 via-transparent to-accent-500/10 rounded-2xl" />
 
                 <div className="relative py-6 px-3">
                   <div className="flex flex-col space-y-2">

@@ -56,6 +56,16 @@ self.addEventListener('fetch', event => {
   const { request } = event;
   const url = new URL(request.url);
 
+  // Skip non-http(s) requests (chrome-extension, etc.)
+  if (!url.protocol.startsWith('http')) {
+    return;
+  }
+
+  // Skip cross-origin requests that we don't want to cache
+  if (url.origin !== location.origin && !url.hostname.includes('fonts.googleapis.com') && !url.hostname.includes('fonts.gstatic.com')) {
+    return;
+  }
+
   // Handle navigation requests
   if (request.mode === 'navigate') {
     event.respondWith(
@@ -117,10 +127,12 @@ self.addEventListener('fetch', event => {
       return fetch(request)
         .then(response => {
           // Cache successful responses
-          if (response.status === 200) {
+          if (response.status === 200 && url.protocol.startsWith('http')) {
             const responseClone = response.clone();
             caches.open(DYNAMIC_CACHE).then(cache => {
-              cache.put(request, responseClone);
+              cache.put(request, responseClone).catch(error => {
+                console.log('Failed to cache resource:', error);
+              });
             });
           }
           return response;
