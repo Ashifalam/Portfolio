@@ -6,102 +6,49 @@ import Card, { CardBody, CardHeader, CardTitle } from './Card';
 const Experience = () => {
   const experiences = [
     {
-      company: 'Leucine Tech',
-      position: 'Software Engineer (Node.js)',
+      company: 'ZopSmart (Kroger)',
+      position: 'Software Developer',
       location: 'Bengaluru, Karnataka',
-      duration: 'March 2023 – Present',
+      duration: 'August 2024 – Present',
       type: 'Full-time',
       achievements: [
-        'Designed and implemented dynamic analytics, reducing dependency on QuickSight and improving data visualisation flexibility',
-        'Successfully implemented Azure and Okta Single Sign-On (SSO) solutions, enhancing security and ease of access for users',
-        'Integrated Redis across the application to optimize API response time and enhance performance',
-        'Spearheaded several query optimization projects in PostgreSQL, significantly reducing response times and enhancing overall system performance',
-        'Played a crucial role in code reviews, providing constructive feedback to team members and maintaining code quality standards',
+        'Worked on API automation using Rest Assured, Karate Framework as well as UI automation using Selenium',
+        'Designed and executed comprehensive test suites to ensure reliability, functionality, and performance of backend APIs',
+        'Developed automated scripts for user interaction simulations, ensuring consistent behavior across browsers and platforms',
+        'Collaborated with development teams to identify and resolve testing bottlenecks',
+        'Implemented robust testing frameworks to improve software quality and reduce manual testing efforts',
       ],
       technologies: [
-        'Node.js',
-        'PostgreSQL',
-        'Redis',
-        'Azure',
-        'Okta',
-        'QuickSight',
-      ],
-    },
-    {
-      company: 'Zopsmart',
-      position: 'Software Engineer',
-      location: 'Bengaluru, Karnataka',
-      duration: 'March 2022 – March 2023',
-      type: 'Full-time',
-      achievements: [
-        'Developed scalable Node.js microservices for McAfee',
-        'Designed and implemented data layer using Postgres and Knex as the ORM',
-        'Collaborated with the client and other team members to turn requirements into code and deliver high-quality software on time',
-        'Leading a team of five junior developers, providing technical guidance and training to ensure successful project completion',
-      ],
-      technologies: [
-        'Node.js',
-        'PostgreSQL',
-        'Knex.js',
-        'Microservices',
-        'Team Leadership',
-      ],
-    },
-    {
-      company: 'Lal10',
-      position: 'Software Engineer',
-      location: 'Noida, UP',
-      duration: 'October 2020 – February 2022',
-      type: 'Full-time',
-      achievements: [
-        'Built backend systems using Node.js and Express',
-        'Designed efficient MySQL schemas and optimized queries',
-        'Developed APIs for integration with payment gateways and third-party systems',
-        'Created a rule engine matching products to artisans based on skills, availability, and cost',
-        'Developed and deployed multiple microservices using Java Spring Boot',
-      ],
-      technologies: [
-        'Node.js',
-        'Express.js',
-        'MySQL',
+        'Rest Assured',
+        'Karate Framework',
+        'Selenium',
+        'API Testing',
+        'UI Automation',
         'Java',
-        'Spring Boot',
-        'Payment Gateways',
       ],
     },
     {
-      company: 'Mountblue',
-      position: 'Software Engineer - Trainee',
-      location: 'Bengaluru, Karnataka',
-      duration: 'June 2020 – September 2020',
-      type: 'Training',
+      company: 'Anand Neuburg Diagnostic Laboratory',
+      position: 'Data Science Intern',
+      location: 'Remote',
+      duration: 'April 2023 – August 2023',
+      type: 'Internship',
       achievements: [
-        'Developed a Spotify clone using React, Redux, Express, and MySQL',
-        'Built a Project Issue Tracker with full-stack capabilities',
-        'Gained extensive experience in full-stack development',
-        'Worked effectively in an agile development environment',
+        'Developed an application using machine learning and deep learning to address challenges in interpreting laboratory test results',
+        'Focused on TyphifastICT cards or strips for positive or negative classification, reducing human error and false positives',
+        'Analyzed varied image orientations and implemented segmentation for multi-card identification in images',
+        'Implemented a solution incorporating Roboflow, YOLOv8, and advanced preprocessing/model-building algorithms',
+        'Enhanced accuracy, reduced human error, and enabled robust analysis of test bands including segmentation in images with multiple cards',
       ],
       technologies: [
-        'React',
-        'Redux',
-        'Express.js',
-        'MySQL',
-        'Full-stack Development',
+        'Python',
+        'Machine Learning',
+        'Deep Learning',
+        'YOLOv8',
+        'Roboflow',
+        'Computer Vision',
+        'Image Processing',
       ],
-    },
-    {
-      company: 'LiftOff',
-      position: 'Associate Software Engineer',
-      location: 'Bengaluru, Karnataka',
-      duration: 'January 2019 – June 2020',
-      type: 'Full-time',
-      achievements: [
-        'Developed authentication and profile features using React and Firebase',
-        'Completed Data Structures and Algorithms certification from FreeCodeCamp',
-        'Developed responsive and user-friendly frontend interfaces',
-        'Collaborated with team members to implement best practices',
-      ],
-      technologies: ['React', 'Firebase', 'JavaScript', 'Frontend Development'],
     },
   ];
 
@@ -129,7 +76,7 @@ const Experience = () => {
       <SectionHeader
         subtitle="My journey"
         title="Work Experience"
-        description="5+ years of professional software development experience across various companies and technologies"
+        description="Professional software development experience with expertise in automation testing and machine learning applications"
       />
 
       <motion.div
@@ -229,7 +176,7 @@ const Experience = () => {
         <Card className="text-center p-6">
           <CardBody>
             <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-              5+
+              1+
             </div>
             <div className="text-gray-600 dark:text-gray-300">
               Years Experience
@@ -240,7 +187,7 @@ const Experience = () => {
         <Card className="text-center p-6">
           <CardBody>
             <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-              5
+              2
             </div>
             <div className="text-gray-600 dark:text-gray-300">Companies</div>
           </CardBody>
@@ -249,7 +196,7 @@ const Experience = () => {
         <Card className="text-center p-6">
           <CardBody>
             <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-              20+
+              5+
             </div>
             <div className="text-gray-600 dark:text-gray-300">
               Projects Delivered

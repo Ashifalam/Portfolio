@@ -5,19 +5,19 @@ import Card, { CardBody } from './Card';
 
 const About = () => {
   const stats = [
-    { icon: HiCode, label: 'Years Experience', value: '5+' },
-    { icon: HiServer, label: 'Projects Completed', value: '20+' },
-    { icon: HiDatabase, label: 'Technologies', value: '15+' },
-    { icon: HiLightningBolt, label: 'Performance Boost', value: '40%' },
+    { icon: HiCode, label: 'Years Experience', value: '1+' },
+    { icon: HiServer, label: 'Projects Completed', value: '5+' },
+    { icon: HiDatabase, label: 'Technologies', value: '10+' },
+    { icon: HiLightningBolt, label: 'CGPA', value: '9.13' },
   ];
 
   const highlights = [
-    'Specialized in Node.js and PostgreSQL development',
-    'Expert in microservices architecture and system design',
-    'Led teams of 5+ developers across multiple projects',
-    'Optimized database queries improving performance by 40%',
-    'Implemented enterprise SSO solutions (Azure, Okta)',
-    'Built scalable backend systems handling millions of requests',
+    'Specialized in Python, Machine Learning, and Deep Learning',
+    'Expert in computer vision and image processing applications',
+    'Developed automated testing solutions using Selenium and Karate',
+    'Built ML models for medical diagnostic applications',
+    'Implemented object tracking systems using YOLO and OpenCV',
+    'Experience with API automation and UI testing frameworks',
   ];
 
   return (
@@ -25,7 +25,7 @@ const About = () => {
       <SectionHeader
         subtitle="Get to know me"
         title="About Me"
-        description="Passionate software engineer with 5+ years of experience building scalable backend solutions"
+        description="Passionate software developer specializing in Python, Machine Learning, and AI technologies"
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -37,30 +37,29 @@ const About = () => {
           viewport={{ once: true }}
         >
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-            Building the Future, One Line of Code at a Time
+            Innovating with AI and Machine Learning
           </h3>
 
           <div className="space-y-4 text-gray-600 dark:text-gray-300">
             <p>
-              I'm a passionate Software Engineer with over 5 years of experience
-              specializing in backend development and system architecture.
-              Currently working at Leucine Tech, I focus on building scalable
-              microservices and implementing enterprise-level solutions.
+              I'm a passionate Software Developer with expertise in Python, Machine Learning, 
+              and AI technologies. Currently working at ZopSmart (Kroger), I focus on building 
+              automated testing solutions and developing intelligent applications that solve 
+              real-world challenges.
             </p>
 
             <p>
-              My journey in software development has taken me through various
-              domains, from e-commerce platforms to enterprise applications. I
-              have a proven track record of optimizing system performance,
-              leading development teams, and delivering high-quality software
-              solutions that drive business growth.
+              My journey in technology has led me through diverse projects, from medical 
+              diagnostic applications using computer vision to advanced object tracking systems. 
+              I have experience in both API automation using Rest Assured and Karate Framework, 
+              as well as UI automation using Selenium.
             </p>
 
             <p>
-              When I'm not coding, I enjoy exploring new technologies,
-              contributing to open-source projects, and mentoring junior
-              developers. I believe in continuous learning and staying updated
-              with the latest industry trends.
+              When I'm not coding, I enjoy exploring cutting-edge AI technologies, participating 
+              in hackathons, and working on innovative projects that leverage machine learning 
+              to create meaningful impact. I believe in the power of technology to transform 
+              industries and improve lives.
             </p>
           </div>
 
@@ -136,13 +135,13 @@ const About = () => {
               <CardBody>
                 <div className="text-center">
                   <div className="w-32 h-32 mx-auto bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-4">
-                    <span className="text-4xl font-bold text-white">AZ</span>
+                    <span className="text-4xl font-bold text-white">AA</span>
                   </div>
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                    Aquif Zubair
+                    Ashif Alam
                   </h4>
                   <p className="text-gray-600 dark:text-gray-300 text-sm">
-                    Software Engineer
+                    Software Developer
                   </p>
                   <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">
                     Bangalore, India

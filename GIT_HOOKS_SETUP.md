@@ -133,7 +133,7 @@ chmod +x .husky/pre-push
 
 The contact information has been updated with the correct phone number:
 - **Phone**: +91 7070742505
-- **Email**: aquifzubair98@gmail.com
+- **Email**: ashifalam470@gmail.com
 - **Location**: Bangalore, India
 
 ## 🔄 Recent Updates

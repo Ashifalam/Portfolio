@@ -1,10 +1,10 @@
-# Aquif Zubair - React Portfolio
+# Ashif Alam - React Portfolio
 
 A modern, responsive portfolio website built with React, Tailwind CSS, and Framer Motion. Features a clean design, smooth animations, and production-ready code quality.
 
 ## 🚀 Live Demo
 
-Visit the live portfolio: [https://aquifzubair.netlify.app/](https://aquifzubair.netlify.app/)
+Visit the live portfolio: [https://ashifalam.netlify.app/](https://ashifalam.netlify.app/)
 
 ## ✨ Features
 
@@ -69,7 +69,7 @@ npm --version
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/aquifzubair/react-portfolio.git
+git clone https://github.com/ashifalam/react-portfolio.git
 cd react-portfolio
 ```
 
@@ -192,7 +192,7 @@ react-portfolio/
 │   ├── pre-commit                   # Pre-commit quality checks
 │   └── pre-push                     # Pre-push quality checks
 ├── public/
-│   ├── Aquif_Zubair_Resume.pdf     # Resume download file
+│   ├── Ashif_Alam_Resume.pdf       # Resume download file
 │   ├── favicon.svg                  # Site favicon
 │   ├── manifest.json               # PWA manifest
 │   ├── robots.txt                  # SEO robots file
@@ -267,7 +267,7 @@ Update the following files to customize content:
 - **Education**: `src/components/Education.jsx`
 
 ### Resume
-Replace `public/Aquif_Zubair_Resume.pdf` with your own resume file.
+Replace `public/Ashif_Alam_Resume.pdf` with your own resume file.
 
 ## 📱 Responsive Design
 
@@ -357,11 +357,11 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 📞 Contact
 
-**Aquif Zubair**
-- Phone: +91 7070742505
-- Email: aquifzubair98@gmail.com
-- LinkedIn: [linkedin.com/in/aquif-zubair](https://www.linkedin.com/in/aquif-zubair/)
-- GitHub: [github.com/aquifzubair](https://github.com/aquifzubair)
+**Ashif Alam**
+- Phone: +91 7667053598
+- Email: ashifalam470@gmail.com
+- LinkedIn: [linkedin.com/in/ashif-alam-396521207](https://www.linkedin.com/in/ashif-alam-396521207/)
+- GitHub: [github.com/ashifalam](https://github.com/ashifalam)
 - Location: Bangalore, India
 
 ## 🙏 Acknowledgments
@@ -374,4 +374,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-**Built with ❤️ by Aquif Zubair**
+**Built with ❤️ by Ashif Alam**

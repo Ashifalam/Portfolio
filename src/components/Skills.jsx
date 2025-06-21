@@ -1,35 +1,28 @@
 import { motion } from 'framer-motion';
 import {
-  SiNodedotjs,
-  SiPostgresql,
-  SiJavascript,
-  SiTypescript,
-  SiReact,
-  SiExpress,
-  SiRedis,
-  SiDocker,
+  SiPython,
+  SiMysql,
+  SiPostman,
   SiGit,
-  SiMongodb,
-  SiApachekafka,
+  SiTensorflow,
+  SiScikitlearn,
+  SiStreamlit,
+  SiPycharm,
+  SiCanva,
 } from 'react-icons/si';
-import { HiServer, HiDatabase, HiCode, HiCog, HiCloud } from 'react-icons/hi';
+import { HiServer, HiDatabase, HiCode, HiCog, HiAcademicCap } from 'react-icons/hi';
 import Section, { SectionHeader } from './Section';
 import Card, { CardBody, CardHeader, CardTitle } from './Card';
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Backend Development',
-      icon: HiServer,
+      title: 'Programming Languages',
+      icon: HiCode,
       color:
         'bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400',
       skills: [
-        { name: 'Node.js', icon: SiNodedotjs, level: 95 },
-        { name: 'Express.js', icon: SiExpress, level: 90 },
-        { name: 'Koa.js', icon: HiServer, level: 75 },
-        { name: 'JavaScript', icon: SiJavascript, level: 95 },
-        { name: 'TypeScript', icon: SiTypescript, level: 85 },
-        { name: 'Kafka', icon: SiApachekafka, level: 70 },
+        { name: 'Python', icon: SiPython, level: 95 },
       ],
     },
     {
@@ -37,32 +30,31 @@ const Skills = () => {
       icon: HiDatabase,
       color: 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400',
       skills: [
-        { name: 'PostgreSQL', icon: SiPostgresql, level: 90 },
-        { name: 'Redis', icon: SiRedis, level: 80 },
-        { name: 'MySQL', icon: SiPostgresql, level: 85 },
-        { name: 'MongoDB', icon: SiMongodb, level: 60 },
+        { name: 'MySQL', icon: SiMysql, level: 85 },
       ],
     },
     {
-      title: 'Frontend Development',
-      icon: HiCode,
+      title: 'Machine Learning & AI',
+      icon: HiAcademicCap,
       color:
         'bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-400',
       skills: [
-        { name: 'React.js', icon: SiReact, level: 80 },
-        { name: 'JavaScript', icon: SiJavascript, level: 90 },
-        { name: 'TypeScript', icon: SiTypescript, level: 75 },
+        { name: 'Scikit-learn', icon: SiScikitlearn, level: 90 },
+        { name: 'TensorFlow', icon: SiTensorflow, level: 85 },
+        { name: 'Streamlit', icon: SiStreamlit, level: 80 },
       ],
     },
     {
-      title: 'DevOps & Tools',
+      title: 'Developer Tools',
       icon: HiCog,
       color:
         'bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-400',
       skills: [
-        { name: 'Docker', icon: SiDocker, level: 75 },
-        { name: 'AWS', icon: HiCloud, level: 70 },
-        { name: 'Git', icon: SiGit, level: 90 },
+        { name: 'Postman', icon: SiPostman, level: 85 },
+        { name: 'PyCharm', icon: SiPycharm, level: 90 },
+        { name: 'Git', icon: SiGit, level: 85 },
+        { name: 'VSCode', icon: HiCode, level: 90 },
+        { name: 'Canva', icon: SiCanva, level: 75 },
       ],
     },
   ];
@@ -163,22 +155,21 @@ const Skills = () => {
               Core Expertise
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-3xl mx-auto">
-              Specialized in building scalable backend systems with Node.js and
-              PostgreSQL. Experienced in microservices architecture, API
-              development, database optimization, and enterprise-level
-              integrations.
+              Specialized in Python development with expertise in Machine Learning, 
+              Deep Learning, and Computer Vision. Experienced in automation testing, 
+              API development, and building intelligent applications that solve real-world problems.
             </p>
 
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                'Microservices',
-                'API Development',
-                'Database Design',
-                'Performance Optimization',
-                'System Architecture',
-                'Code Reviews',
-                'Team Leadership',
-                'Agile Development',
+                'Machine Learning',
+                'Deep Learning',
+                'Computer Vision',
+                'API Automation',
+                'UI Automation',
+                'Test Automation',
+                'Data Science',
+                'Python Development',
               ].map((skill, index) => (
                 <motion.span
                   key={index}

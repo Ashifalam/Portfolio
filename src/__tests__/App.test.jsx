@@ -21,7 +21,7 @@ describe('App Component', () => {
     render(<App />);
 
     // Hero section should be present
-    expect(screen.getByText('Aquif Zubair')).toBeInTheDocument();
+    expect(screen.getByText('Ashif Alam')).toBeInTheDocument();
   });
 
   it('renders main content area', () => {

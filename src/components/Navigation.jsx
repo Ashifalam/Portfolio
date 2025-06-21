@@ -78,7 +78,7 @@ const Navigation = () => {
             whileHover={{ scale: 1.05 }}
             onClick={() => scrollToSection('#home')}
           >
-            Aquif Zubair
+            Ashif Alam
           </motion.div>
 
           {/* Desktop Navigation */}

@@ -11,79 +11,79 @@ import Card, { CardBody, CardHeader, CardTitle } from './Card';
 const Education = () => {
   const education = [
     {
-      institution: 'Sant Longowal Institute Of Engineering And Technology',
-      degree: 'Bachelor of Engineering in Computer Science',
-      location: 'Sangrur, Punjab',
-      duration: 'Sep 2016 – May 2019',
-      grade: '7.2 CGPA',
-      status: 'Passed with distinction',
+      institution: 'Dayananda Sagar College of Engineering, Bangalore',
+      degree: 'B.E in Artificial Intelligence and Machine Learning',
+      location: 'Bangalore, Karnataka',
+      duration: '2020 – 2024',
+      grade: '9.13 CGPA',
+      status: 'Graduated with distinction',
       achievements: [
-        'Graduated with distinction (7.2 CGPA)',
-        'Specialized in Computer Science and Engineering',
-        'Strong foundation in algorithms and data structures',
-        'Participated in coding competitions and hackathons',
+        'Graduated with excellent CGPA of 9.13',
+        'Specialized in Artificial Intelligence and Machine Learning',
+        'Strong foundation in AI/ML algorithms and deep learning',
+        'Participated in various hackathons and technical workshops',
       ],
       subjects: [
+        'Machine Learning',
+        'Deep Learning',
+        'Artificial Intelligence',
+        'Computer Vision',
         'Data Structures & Algorithms',
-        'Database Management Systems',
-        'Software Engineering',
-        'Computer Networks',
-        'Operating Systems',
-        'Web Technologies',
-      ],
-    },
-    {
-      institution: 'University Polytechnic, Aligarh Muslim University',
-      degree: 'Diploma in Electronics Engineering',
-      location: 'Aligarh, UP',
-      duration: 'Apr 2012 – May 2015',
-      grade: '76.6%',
-      status: 'Passed with distinction',
-      achievements: [
-        'Graduated with distinction (76.6%)',
-        'Strong foundation in electronics and engineering principles',
-        'Hands-on experience with electronic circuits and systems',
-        'Developed problem-solving and analytical skills',
-      ],
-      subjects: [
-        'Electronic Circuits',
-        'Digital Electronics',
-        'Microprocessors',
-        'Communication Systems',
-        'Control Systems',
-        'Engineering Mathematics',
+        'Python Programming',
+        'Statistics and Probability',
+        'Neural Networks',
       ],
     },
   ];
 
   const certifications = [
     {
-      title: 'Data Structures and Algorithms',
-      provider: 'FreeCodeCamp',
-      year: '2020',
+      title: 'SimpleLearn certification in python libraries',
+      provider: 'SimpleLearn',
+      year: '2023',
       type: 'Certification',
-      skills: ['Algorithms', 'Data Structures', 'Problem Solving'],
+      skills: ['Python', 'Libraries', 'Data Science'],
     },
     {
-      title: 'Node.js Development',
-      provider: 'Professional Experience',
-      year: '2019-Present',
-      type: 'Professional',
-      skills: ['Node.js', 'Express.js', 'API Development'],
+      title: 'TCS MasterCraft DataPlus',
+      provider: 'TCS',
+      year: '2023',
+      type: 'Certification',
+      skills: ['Data Analytics', 'Data Processing', 'Business Intelligence'],
     },
     {
-      title: 'PostgreSQL Database Administration',
-      provider: 'Professional Experience',
-      year: '2020-Present',
-      type: 'Professional',
-      skills: ['PostgreSQL', 'Database Design', 'Query Optimization'],
+      title: 'HackerRank Skill Certificate for python',
+      provider: 'HackerRank',
+      year: '2023',
+      type: 'Certification',
+      skills: ['Python Programming', 'Problem Solving', 'Algorithms'],
+    },
+  ];
+
+  const achievements = [
+    {
+      title: '6th Sense workshop by Techfest, IIT Bombay',
+      description: 'Participated in advanced technical workshop',
+      year: '2023',
+      type: 'Workshop',
     },
     {
-      title: 'Microservices Architecture',
-      provider: 'Professional Experience',
-      year: '2021-Present',
-      type: 'Professional',
-      skills: ['Microservices', 'System Design', 'Scalability'],
+      title: 'HacktoberFest 2022',
+      description: 'Contributed to open source projects',
+      year: '2022',
+      type: 'Open Source',
+    },
+    {
+      title: 'BeachHack5 Hackathon',
+      description: 'Participated in competitive hackathon',
+      year: '2023',
+      type: 'Hackathon',
+    },
+    {
+      title: 'Aventus Hackathon Volunteer',
+      description: 'Volunteered and supported hackathon organization',
+      year: '2023',
+      type: 'Volunteer',
     },
   ];
 
@@ -212,7 +212,7 @@ const Education = () => {
           </div>
         </motion.div>
 
-        {/* Certifications & Professional Development */}
+        {/* Certifications */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -220,10 +220,10 @@ const Education = () => {
           viewport={{ once: true }}
         >
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-            Certifications & Professional Development
+            Certifications
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
               <motion.div key={index} variants={itemVariants}>
                 <Card className="h-full hover:shadow-lg transition-shadow duration-300">
@@ -238,13 +238,7 @@ const Education = () => {
                         </p>
                       </div>
                       <div className="text-right">
-                        <span
-                          className={`px-2 py-1 rounded-full text-xs font-medium ${
-                            cert.type === 'Certification'
-                              ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
-                              : 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200'
-                          }`}
-                        >
+                        <span className="px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
                           {cert.type}
                         </span>
                         <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
@@ -262,6 +256,57 @@ const Education = () => {
                           {skill}
                         </span>
                       ))}
+                    </div>
+                  </CardBody>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Honors and Awards */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            Honors and Awards
+          </h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {achievements.map((achievement, index) => (
+              <motion.div key={index} variants={itemVariants}>
+                <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+                  <CardBody>
+                    <div className="flex items-start justify-between mb-3">
+                      <div className="flex-1">
+                        <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
+                          {achievement.title}
+                        </h4>
+                        <p className="text-gray-600 dark:text-gray-300 text-sm">
+                          {achievement.description}
+                        </p>
+                      </div>
+                      <div className="text-right">
+                        <span
+                          className={`px-2 py-1 rounded-full text-xs font-medium ${
+                            achievement.type === 'Workshop'
+                              ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
+                              : achievement.type === 'Hackathon'
+                              ? 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200'
+                              : achievement.type === 'Open Source'
+                              ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
+                              : 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200'
+                          }`}
+                        >
+                          {achievement.type}
+                        </span>
+                        <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                          {achievement.year}
+                        </p>
+                      </div>
                     </div>
                   </CardBody>
                 </Card>
