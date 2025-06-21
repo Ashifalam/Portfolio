@@ -42,7 +42,7 @@ export const preloadCriticalResources = () => {
     // Preload critical images (if any)
     const resumeLink = document.createElement('link');
     resumeLink.rel = 'prefetch';
-    resumeLink.href = '/Aquif_Zubair_Resume.pdf';
+    resumeLink.href = '/Ashif_Alam_Resume.pdf';
     document.head.appendChild(resumeLink);
   }
 };

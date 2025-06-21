@@ -6,124 +6,49 @@ import Card, { CardBody, CardHeader, CardTitle } from './Card';
 const Experience = () => {
   const experiences = [
     {
-      company: 'Leucine - AI for Pharma',
-      position: 'Senior Software Engineer | Back End Developer',
+      company: 'ZopSmart (Kroger)',
+      position: 'Software Developer',
       location: 'Bengaluru, Karnataka',
-      duration: 'April 2023 – Present',
+      duration: 'August 2024 – Present',
       type: 'Full-time',
       promotion: 'Promoted to Senior Software Engineer in April 2025',
       achievements: [
-        'Built analytics dashboard using Node.js and TypeScript, replacing AWS QuickSight and improving data visualization flexibility by 40% while reducing costs',
-        'Implemented Azure Active Directory and Okta SSO solutions with OAuth 2.0 and SAML protocols, improving security compliance and reducing user authentication time by 60%',
-        'Added Redis caching layer across microservices architecture, implementing caching patterns to optimize API response times by 50% and improve system performance',
-        'Led PostgreSQL query optimization using indexing strategies, query analysis, and database partitioning, reducing database response times by 70%',
-        'Conducted code reviews for 8+ developers using GitLab CI/CD pipelines, maintaining 95%+ code quality standards while mentoring junior engineers',
-        'Worked with product managers and stakeholders in Agile environment to deliver software solutions on time and within budget',
+        'Worked on API automation using Rest Assured, Karate Framework as well as UI automation using Selenium',
+        'Designed and executed comprehensive test suites to ensure reliability, functionality, and performance of backend APIs',
+        'Developed automated scripts for user interaction simulations, ensuring consistent behavior across browsers and platforms',
+        'Collaborated with development teams to identify and resolve testing bottlenecks',
+        'Implemented robust testing frameworks to improve software quality and reduce manual testing efforts',
       ],
       technologies: [
-        'Node.js',
-        'TypeScript',
-        'PostgreSQL',
-        'Redis',
-        'Azure Active Directory',
-        'Okta',
-        'OAuth 2.0',
-        'SAML',
-        'GitLab CI/CD',
-        'Microservices',
-      ],
-    },
-    {
-      company: 'ZopSmart',
-      position: 'Software Engineer II',
-      location: 'Bengaluru, Karnataka',
-      duration: 'March 2022 – March 2023',
-      type: 'Full-time',
-      achievements: [
-        'Developed and deployed scalable Node.js microservices architecture for McAfee enterprise client, implementing load balancing and auto-scaling to handle 10,000+ concurrent users with 99.9% uptime',
-        'Designed robust data layer architecture using PostgreSQL and Knex.js ORM with connection pooling and query optimization, improving data retrieval efficiency by 35% and reducing server response times',
-        'Led technical mentorship and guidance for 5 junior developers in Agile development practices, conducting daily standups and sprint planning, achieving 100% project delivery success rate within deadlines',
-        'Implemented comprehensive API testing strategies using Postman and automated testing frameworks, ensuring code quality and reducing production bugs by 40%',
-      ],
-      technologies: [
-        'Node.js',
-        'PostgreSQL',
-        'Knex.js',
-        'Microservices',
-        'Load Balancing',
-        'Auto-scaling',
-        'Postman',
+        'Rest Assured',
+        'Karate Framework',
+        'Selenium',
         'API Testing',
-        'Agile',
-      ],
-    },
-    {
-      company: 'Lal10',
-      position: 'Software Engineer',
-      location: 'Noida, UP',
-      duration: 'October 2020 – February 2022',
-      type: 'Full-time',
-      achievements: [
-        'Built and maintained scalable backend systems using Node.js, Express.js, and RESTful API architecture, supporting 5,000+ daily active users with high availability and performance optimization',
-        'Optimized MySQL database schemas through indexing, normalization, and query restructuring, improving query performance by 45% and reducing server load during peak traffic',
-        'Developed secure payment gateway APIs with encryption and PCI DSS compliance, processing 1,000+ financial transactions daily while ensuring data security and fraud prevention',
-        'Created intelligent rule engine using machine learning algorithms for product-artisan matching and deployed Java Spring Boot microservices with Docker containerization for improved scalability',
-        'Implemented comprehensive error handling, logging, and monitoring systems to ensure system reliability and facilitate rapid troubleshooting of production issues',
-      ],
-      technologies: [
-        'Node.js',
-        'Express.js',
-        'MySQL',
-        'RESTful APIs',
+        'UI Automation',
         'Java',
-        'Spring Boot',
-        'Docker',
-        'Payment Gateways',
-        'PCI DSS',
+      ],
+    },
+    {
+      company: 'Anand Neuburg Diagnostic Laboratory',
+      position: 'Data Science Intern',
+      location: 'Remote',
+      duration: 'April 2023 – August 2023',
+      type: 'Internship',
+      achievements: [
+        'Developed an application using machine learning and deep learning to address challenges in interpreting laboratory test results',
+        'Focused on TyphifastICT cards or strips for positive or negative classification, reducing human error and false positives',
+        'Analyzed varied image orientations and implemented segmentation for multi-card identification in images',
+        'Implemented a solution incorporating Roboflow, YOLOv8, and advanced preprocessing/model-building algorithms',
+        'Enhanced accuracy, reduced human error, and enabled robust analysis of test bands including segmentation in images with multiple cards',
+      ],
+      technologies: [
+        'Python',
         'Machine Learning',
-      ],
-    },
-    {
-      company: 'MountBlue Technologies',
-      position: 'Software Engineer Trainee',
-      location: 'Bengaluru, Karnataka',
-      duration: 'July 2020 – September 2020',
-      type: 'Training',
-      achievements: [
-        'Developed full-stack Spotify clone application using React.js, Redux for state management, Express.js backend, and MySQL database with complete music streaming functionality, user authentication, and playlist management features',
-        'Built comprehensive Project Issue Tracker with full-stack capabilities including user authentication, role-based access control, and real-time updates using React.js frontend and Firebase backend services',
-        'Implemented responsive web design principles and modern JavaScript ES6+ features to ensure cross-browser compatibility and optimal user experience across different devices',
-      ],
-      technologies: [
-        'React.js',
-        'Redux',
-        'Express.js',
-        'MySQL',
-        'Firebase',
-        'JavaScript ES6+',
-        'Responsive Design',
-        'Authentication',
-      ],
-    },
-    {
-      company: 'LiftOff LLC',
-      position: 'Software Engineer Trainee',
-      location: 'Bengaluru, Karnataka',
-      duration: 'February 2020 – June 2020',
-      type: 'Training',
-      achievements: [
-        'Developed secure authentication and comprehensive user profile management features using React.js frontend and Firebase backend, implementing OAuth integration and real-time data synchronization',
-        'Completed Data Structures and Algorithms certification from FreeCodeCamp, strengthening problem-solving skills and algorithmic thinking for efficient software development',
-        'Participated in code reviews and collaborative development practices, gaining experience in version control with Git and following industry-standard coding conventions',
-      ],
-      technologies: [
-        'React.js',
-        'Firebase',
-        'OAuth',
-        'Git',
-        'Data Structures',
-        'Algorithms',
-        'Code Reviews',
+        'Deep Learning',
+        'YOLOv8',
+        'Roboflow',
+        'Computer Vision',
+        'Image Processing',
       ],
     },
   ];
@@ -152,7 +77,7 @@ const Experience = () => {
       <SectionHeader
         subtitle="My journey"
         title="Work Experience"
-        description="5+ years of professional software development experience across various companies and technologies"
+        description="Professional software development experience with expertise in automation testing and machine learning applications"
       />
 
       <motion.div
@@ -259,7 +184,7 @@ const Experience = () => {
         <Card className="text-center p-6">
           <CardBody>
             <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-              5+
+              1+
             </div>
             <div className="text-gray-600 dark:text-gray-300">
               Years Experience
@@ -270,7 +195,7 @@ const Experience = () => {
         <Card className="text-center p-6">
           <CardBody>
             <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-              5
+              2
             </div>
             <div className="text-gray-600 dark:text-gray-300">Companies</div>
           </CardBody>
@@ -279,7 +204,7 @@ const Experience = () => {
         <Card className="text-center p-6">
           <CardBody>
             <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-              20+
+              5+
             </div>
             <div className="text-gray-600 dark:text-gray-300">
               Projects Delivered

@@ -8,11 +8,11 @@ const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0);
 
   const roles = [
-    'Senior Software Engineer',
-    'Backend Developer',
-    'Node.js Expert',
-    'System Architect',
-    'Full Stack Developer',
+    'Software Developer',
+    'Python Developer',
+    'Machine Learning Engineer',
+    'Data Science Specialist',
+    'AI/ML Developer',
   ];
 
   // Typing animation effect
@@ -82,7 +82,7 @@ const Hero = () => {
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-secondary-900 dark:text-white mb-6"
             variants={itemVariants}
           >
-            <span className="text-gradient">Aquif Zubair</span>
+            <span className="text-gradient">Ashif Alam</span>
           </motion.h1>
 
           {/* Dynamic Role */}
@@ -107,13 +107,10 @@ const Hero = () => {
             className="text-lg md:text-xl text-secondary-600 dark:text-secondary-300 max-w-3xl mx-auto mb-12 leading-relaxed"
             variants={itemVariants}
           >
-            Senior Software Engineer with 5+ years of experience in backend
-            development, specializing in Node.js and microservices architecture.
-            Proven track record of leading teams, optimizing system performance
-            by up to 70%, and implementing solutions for high-traffic
-            applications. Recently promoted to Senior Software Engineer in April
-            2025, demonstrating strong technical leadership and delivery
-            capabilities.
+            Passionate about building intelligent solutions using Python,
+            Machine Learning, and AI. Specializing in computer vision, deep
+            learning, and automation testing with experience in developing
+            innovative applications for real-world challenges.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -136,8 +133,8 @@ const Hero = () => {
               icon={HiDownload}
               onClick={() => {
                 const link = document.createElement('a');
-                link.href = '/Aquif_Zubair_Resume.pdf';
-                link.download = 'Aquif_Zubair_Resume.pdf';
+                link.href = '/Ashif_Alam_Resume.pdf';
+                link.download = 'Ashif_Alam_Resume.pdf';
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
@@ -154,7 +151,7 @@ const Hero = () => {
             variants={itemVariants}
           >
             <motion.a
-              href="https://www.linkedin.com/in/aquif-zubair/"
+              href="https://www.linkedin.com/in/ashif-alam-396521207/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-secondary-600 dark:text-secondary-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
@@ -166,7 +163,7 @@ const Hero = () => {
             </motion.a>
 
             <motion.a
-              href="https://github.com/aquifzubair"
+              href="https://github.com/ashifalam"
               target="_blank"
               rel="noopener noreferrer"
               className="text-secondary-600 dark:text-secondary-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
@@ -178,7 +175,7 @@ const Hero = () => {
             </motion.a>
 
             <motion.a
-              href="mailto:aquifzubair98@gmail.com"
+              href="mailto:ashifalam470@gmail.com"
               className="text-secondary-600 dark:text-secondary-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}

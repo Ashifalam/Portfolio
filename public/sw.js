@@ -1,6 +1,6 @@
 // Service Worker for caching and offline functionality
 // eslint-disable-next-line no-unused-vars
-const CACHE_NAME = 'aquif-portfolio-v1';
+const CACHE_NAME = 'ashif-portfolio-v1';
 const STATIC_CACHE = 'static-v1';
 const DYNAMIC_CACHE = 'dynamic-v1';
 
@@ -10,7 +10,7 @@ const STATIC_ASSETS = [
   '/index.html',
   '/manifest.json',
   '/favicon.svg',
-  '/Aquif_Zubair_Resume.pdf',
+  '/Ashif_Alam_Resume.pdf',
   '/robots.txt',
   '/sitemap.xml',
 ];

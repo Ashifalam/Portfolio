@@ -9,13 +9,13 @@ const Footer = () => {
     {
       name: 'LinkedIn',
       icon: FaLinkedin,
-      url: 'https://www.linkedin.com/in/aquif-zubair-167b23155/',
+      url: 'https://www.linkedin.com/in/ashif-alam-396521207/',
       color: 'hover:text-blue-600',
     },
     {
       name: 'GitHub',
       icon: FaGithub,
-      url: 'https://github.com/aquifzubair',
+      url: 'https://github.com/ashifalam',
       color: 'hover:text-gray-900 dark:hover:text-white',
     },
     {
@@ -29,13 +29,13 @@ const Footer = () => {
   const contactInfo = [
     {
       icon: HiMail,
-      text: 'aquifzubair98@gmail.com',
-      href: 'mailto:aquifzubair98@gmail.com',
+      text: 'ashifalam470@gmail.com',
+      href: 'mailto:ashifalam470@gmail.com',
     },
     {
       icon: HiPhone,
-      text: '+91 9140181089',
-      href: 'tel:+919140181089',
+      text: '+91 7667053598',
+      href: 'tel:+917667053598',
     },
     {
       icon: HiLocationMarker,
@@ -73,12 +73,12 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold text-gradient mb-4">
-              Aquif Zubair
+              Ashif Alam
             </h3>
             <p className="text-secondary-300 mb-6 max-w-md">
-              Software Engineer specializing in building scalable backend
-              solutions and robust applications. Passionate about creating
-              efficient systems that drive business growth.
+              Software Developer specializing in Python, Machine Learning, and
+              AI technologies. Passionate about building intelligent
+              applications and automation solutions.
             </p>
 
             {/* Social Links */}
@@ -159,7 +159,7 @@ const Footer = () => {
           viewport={{ once: true }}
         >
           <p className="text-secondary-400 text-sm mb-4 md:mb-0">
-            © {currentYear} Aquif Zubair. All rights reserved.
+            © {currentYear} Ashif Alam. All rights reserved.
           </p>
 
           <div className="flex space-x-6 text-sm">

@@ -80,9 +80,8 @@ export const updateSEO = seoData => {
 
   // Update page title
   const fullTitle = section
-    ? `${section} | Aquif Zubair - Senior Software Engineer`
-    : title ||
-      'Aquif Zubair - Senior Software Engineer | Node.js & Backend Expert';
+    ? `${section} | Ashif Alam - Software Developer`
+    : title || 'Ashif Alam - Software Developer | Python & AI/ML Expert';
 
   updatePageTitle(fullTitle);
 
@@ -97,8 +96,8 @@ export const updateSEO = seoData => {
     description:
       description ||
       'Experienced Software Engineer specializing in Node.js, PostgreSQL, and microservices architecture.',
-    url: url || 'https://aquifzubair.dev/',
-    image: image || 'https://aquifzubair.dev/og-image.jpg',
+    url: url || 'https://ashifalam.dev/',
+    image: image || 'https://ashifalam.dev/og-image.jpg',
   };
 
   updateOpenGraphTags(socialData);
@@ -108,59 +107,59 @@ export const updateSEO = seoData => {
 // Section-specific SEO data
 export const seoData = {
   home: {
-    title: 'Aquif Zubair - Senior Software Engineer | Node.js & Backend Expert',
+    title: 'Ashif Alam - Software Developer | Python & AI/ML Expert',
     description:
-      'Experienced Software Engineer specializing in Node.js, PostgreSQL, and microservices architecture. 5+ years building scalable backend solutions for enterprise applications.',
+      'Software Developer specializing in Python, Machine Learning, and AI technologies. Expert in automation testing, computer vision, and building intelligent applications.',
     keywords:
-      'Aquif Zubair, Software Engineer, Node.js Developer, Backend Developer, PostgreSQL, Microservices, JavaScript, TypeScript, React, Full Stack Developer, Bangalore, India',
-    url: 'https://aquifzubair.dev/',
+      'Ashif Alam, Software Developer, Python Developer, Machine Learning Engineer, AI Developer, Computer Vision, Data Science, Automation Testing, Bangalore, India',
+    url: 'https://ashifalam.dev/',
   },
   about: {
     section: 'About',
     description:
-      "Learn about Aquif Zubair's journey as a Software Engineer, passion for backend development, and 5+ years of experience building scalable applications.",
+      "Learn about Ashif Alam's journey as a Software Developer, passion for AI/ML development, and expertise in building intelligent applications.",
     keywords:
-      'About Aquif Zubair, Software Engineer Background, Backend Developer Experience, Node.js Expert',
-    url: 'https://aquifzubair.dev/#about',
+      'About Ashif Alam, Software Developer Background, Python Developer Experience, AI/ML Expert',
+    url: 'https://ashifalam.dev/#about',
   },
   skills: {
     section: 'Skills & Technologies',
     description:
-      "Explore Aquif Zubair's technical skills including Node.js, PostgreSQL, React, TypeScript, Microservices, and modern development tools.",
+      "Explore Ashif Alam's technical skills including Python, Machine Learning, TensorFlow, Scikit-learn, Computer Vision, and modern AI/ML tools.",
     keywords:
-      'Node.js Skills, PostgreSQL, React, TypeScript, Microservices, Backend Technologies, Software Development Skills',
-    url: 'https://aquifzubair.dev/#skills',
+      'Python Skills, Machine Learning, TensorFlow, Scikit-learn, Computer Vision, AI Technologies, Data Science Skills',
+    url: 'https://ashifalam.dev/#skills',
   },
   experience: {
     section: 'Work Experience',
     description:
-      "Discover Aquif Zubair's professional experience at Leucine Tech, Zopsmart, Lal10, and other companies. 5+ years of backend development expertise.",
+      "Discover Ashif Alam's professional experience at ZopSmart (Kroger), Anand Neuburg Diagnostic Laboratory, and expertise in AI/ML development.",
     keywords:
-      'Software Engineer Experience, Leucine Tech, Zopsmart, Backend Development Career, Node.js Projects',
-    url: 'https://aquifzubair.dev/#experience',
+      'Software Developer Experience, ZopSmart, Kroger, AI/ML Development Career, Python Projects',
+    url: 'https://ashifalam.dev/#experience',
   },
   projects: {
     section: 'Projects Portfolio',
     description:
-      "View Aquif Zubair's portfolio of 20+ projects including enterprise analytics platforms, SSO systems, microservices, and full-stack applications.",
+      "View Ashif Alam's portfolio of AI/ML projects including object tracking, sign language translation, duplicate detection, and medical diagnostic applications.",
     keywords:
-      'Software Projects, Node.js Projects, Enterprise Applications, Microservices Projects, Full Stack Development',
-    url: 'https://aquifzubair.dev/#projects',
+      'AI/ML Projects, Python Projects, Computer Vision, Machine Learning Applications, Data Science Projects',
+    url: 'https://ashifalam.dev/#projects',
   },
   education: {
     section: 'Education & Certifications',
     description:
-      "Aquif Zubair's educational background including B.E. in Computer Science from SLIET and professional certifications in software development.",
+      "Ashif Alam's educational background including B.E. in Artificial Intelligence and Machine Learning from Dayananda Sagar College of Engineering.",
     keywords:
-      'Computer Science Education, SLIET, Software Engineering Degree, Technical Certifications',
-    url: 'https://aquifzubair.dev/#education',
+      'AI/ML Education, Dayananda Sagar College, Machine Learning Degree, Technical Certifications',
+    url: 'https://ashifalam.dev/#education',
   },
   contact: {
     section: 'Contact',
     description:
-      'Get in touch with Aquif Zubair for software development opportunities, collaborations, or technical discussions. Based in Bangalore, India.',
+      'Get in touch with Ashif Alam for software development opportunities, AI/ML collaborations, or technical discussions. Based in Bangalore, India.',
     keywords:
-      'Contact Aquif Zubair, Software Engineer Contact, Bangalore Developer, Hire Node.js Developer',
-    url: 'https://aquifzubair.dev/#contact',
+      'Contact Ashif Alam, Software Developer Contact, Bangalore Developer, Hire Python Developer',
+    url: 'https://ashifalam.dev/#contact',
   },
 };
