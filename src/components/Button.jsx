@@ -42,11 +42,11 @@ const Button = ({
         </svg>
       )}
       {Icon && iconPosition === 'left' && !loading && (
-        <Icon className="mr-2 h-4 w-4" />
+        <Icon className={`h-4 w-4 ${children ? 'mr-2' : ''}`} />
       )}
       {children}
       {Icon && iconPosition === 'right' && !loading && (
-        <Icon className="ml-2 h-4 w-4" />
+        <Icon className={`h-4 w-4 ${children ? 'ml-2' : ''}`} />
       )}
     </>
   );
