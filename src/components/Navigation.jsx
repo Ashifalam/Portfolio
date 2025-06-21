@@ -82,7 +82,7 @@ const Navigation = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? 'bg-white/90 dark:bg-secondary-900/90 backdrop-blur-md shadow-lg'
-          : isOpen 
+          : isOpen
             ? 'bg-white/95 dark:bg-secondary-900/95 backdrop-blur-md shadow-lg'
             : 'bg-transparent'
       }`}
@@ -169,31 +169,29 @@ const Navigation = () => {
                 initial={{ opacity: 0, y: -20, scale: 0.9 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -20, scale: 0.9 }}
-                transition={{ 
-                  duration: 0.3, 
+                transition={{
+                  duration: 0.3,
                   ease: [0.4, 0.0, 0.2, 1],
-                  type: "spring",
+                  type: 'spring',
                   damping: 25,
-                  stiffness: 300
+                  stiffness: 300,
                 }}
               >
-
                 <div className="relative py-6 px-3">
                   <div className="flex flex-col space-y-2">
                     {navItems.map((item, index) => (
                       <motion.button
                         key={item.name}
                         className="group relative text-left text-secondary-700 dark:text-secondary-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-all duration-300 py-3 px-5 rounded-xl text-sm overflow-hidden"
-                        initial={{ opacity: 0, x: -30, rotateX: -15 }}
-                        animate={{ opacity: 1, x: 0, rotateX: 0 }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
                         transition={{
                           delay: index * 0.05,
-                          duration: 0.4,
+                          duration: 0.3,
                           ease: [0.4, 0.0, 0.2, 1],
                         }}
                         whileHover={{
                           scale: 1.02,
-                          x: 4,
                           transition: { duration: 0.2 },
                         }}
                         whileTap={{ scale: 0.98 }}
