@@ -79,13 +79,14 @@ const Navigation = () => {
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 transition-all duration-300 ${
         scrolled
           ? 'bg-white/90 dark:bg-secondary-900/90 backdrop-blur-md shadow-lg'
           : isOpen
             ? 'bg-white/95 dark:bg-secondary-900/95 backdrop-blur-md shadow-lg'
             : 'bg-transparent'
       }`}
+      style={{ zIndex: 9997 }}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
@@ -150,7 +151,8 @@ const Navigation = () => {
             <>
               {/* Backdrop */}
               <motion.div
-                className="md:hidden fixed inset-0 bg-black/30 backdrop-blur-sm z-40"
+                className="md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm"
+                style={{ zIndex: 99998 }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -161,11 +163,8 @@ const Navigation = () => {
               {/* Menu */}
               <motion.div
                 ref={menuRef}
-                className="md:hidden fixed top-0 right-0 h-full w-80 max-w-[85vw] shadow-2xl z-50"
-                style={{
-                  backgroundColor: isDark ? '#0f172a' : '#ffffff',
-                  borderLeft: `1px solid ${isDark ? 'rgba(148, 163, 184, 0.1)' : 'rgba(148, 163, 184, 0.2)'}`,
-                }}
+                className="md:hidden fixed top-0 right-0 h-screen w-80 max-w-[85vw] bg-white dark:bg-secondary-900 shadow-2xl border-l border-secondary-200 dark:border-secondary-700"
+                style={{ zIndex: 99999 }}
                 initial={{ x: '100%' }}
                 animate={{ x: 0 }}
                 exit={{ x: '100%' }}
