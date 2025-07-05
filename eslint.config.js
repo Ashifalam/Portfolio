@@ -64,7 +64,7 @@ export default [
       'eol-last': 'error',
       'comma-dangle': ['error', 'always-multiline'],
       semi: ['error', 'always'],
-      quotes: ['error', 'single'],
+      quotes: ['error', 'single', { avoidEscape: true }],
 
       'import/order': [
         'error',

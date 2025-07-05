@@ -38,7 +38,7 @@ export const updateOpenGraphTags = data => {
 
     const ogTitle = document.querySelector('meta[property="og:title"]');
     const ogDescription = document.querySelector(
-      'meta[property="og:description"]'
+      'meta[property="og:description"]',
     );
     const ogUrl = document.querySelector('meta[property="og:url"]');
     const ogImage = document.querySelector('meta[property="og:image"]');
@@ -56,14 +56,14 @@ export const updateTwitterTags = data => {
     const { title, description, url, image } = data;
 
     const twitterTitle = document.querySelector(
-      'meta[property="twitter:title"]'
+      'meta[property="twitter:title"]',
     );
     const twitterDescription = document.querySelector(
-      'meta[property="twitter:description"]'
+      'meta[property="twitter:description"]',
     );
     const twitterUrl = document.querySelector('meta[property="twitter:url"]');
     const twitterImage = document.querySelector(
-      'meta[property="twitter:image"]'
+      'meta[property="twitter:image"]',
     );
 
     if (twitterTitle && title) twitterTitle.setAttribute('content', title);

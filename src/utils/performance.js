@@ -18,7 +18,7 @@ export const trackWebVitals = () => {
     const fidObserver = new PerformanceObserver(list => {
       list.getEntries().forEach(entry => {
         console.log(
-          `First Input Delay: ${entry.processingStart - entry.startTime}ms`
+          `First Input Delay: ${entry.processingStart - entry.startTime}ms`,
         );
       });
     });
@@ -124,11 +124,11 @@ export const checkPerformanceBudget = () => {
     Object.keys(metrics).forEach(metric => {
       if (metrics[metric] > budgets[metric]) {
         console.warn(
-          `Performance budget exceeded for ${metric}: ${metrics[metric]}ms (budget: ${budgets[metric]}ms)`
+          `Performance budget exceeded for ${metric}: ${metrics[metric]}ms (budget: ${budgets[metric]}ms)`,
         );
       } else {
         console.log(
-          `✅ ${metric}: ${metrics[metric]}ms (within budget: ${budgets[metric]}ms)`
+          `✅ ${metric}: ${metrics[metric]}ms (within budget: ${budgets[metric]}ms)`,
         );
       }
     });

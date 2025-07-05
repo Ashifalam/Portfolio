@@ -26,7 +26,7 @@ self.addEventListener('install', event => {
       })
       .then(() => {
         return self.skipWaiting();
-      })
+      }),
   );
 });
 
@@ -42,12 +42,12 @@ self.addEventListener('activate', event => {
               console.log('Deleting old cache:', cacheName);
               return caches.delete(cacheName);
             }
-          })
+          }),
         );
       })
       .then(() => {
         return self.clients.claim();
-      })
+      }),
   );
 });
 
@@ -92,7 +92,7 @@ self.addEventListener('fetch', event => {
             // Return offline page if available
             return caches.match('/index.html');
           });
-      })
+      }),
     );
     return;
   }
@@ -102,7 +102,7 @@ self.addEventListener('fetch', event => {
     event.respondWith(
       caches.match(request).then(cachedResponse => {
         return cachedResponse || fetch(request);
-      })
+      }),
     );
     return;
   }
@@ -147,12 +147,12 @@ self.addEventListener('fetch', event => {
             // Return placeholder for images
             return new Response(
               '<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="#f0f0f0"/><text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="#999">Image unavailable</text></svg>',
-              { headers: { 'Content-Type': 'image/svg+xml' } }
+              { headers: { 'Content-Type': 'image/svg+xml' } },
             );
           }
           throw new Error('Network failed and resource not cached');
         });
-    })
+    }),
   );
 });
 
@@ -161,7 +161,7 @@ self.addEventListener('sync', event => {
   if (event.tag === 'contact-form') {
     event.waitUntil(
       // Handle offline form submissions
-      handleOfflineFormSubmission()
+      handleOfflineFormSubmission(),
     );
   }
 });
