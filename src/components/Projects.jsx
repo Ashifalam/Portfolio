@@ -8,124 +8,88 @@ import Button from './Button';
 const Projects = () => {
   const projects = [
     {
-      title: 'Enterprise Analytics Platform',
+      title: 'Enhancing Object Tracking Using Multi-Expert Framework',
       description:
-        'Built a comprehensive analytics platform reducing dependency on QuickSight by 80%. Features real-time data visualization, custom dashboards, and advanced reporting capabilities.',
+        'The MEEM framework dynamically selects the most accurate tracker, ensuring robust and precise aerial object tracking under varying conditions. Excels in applications like border surveillance, search and rescue, and autonomous systems.',
       image: '/api/placeholder/400/250',
-      technologies: ['Node.js', 'PostgreSQL', 'Redis', 'React', 'D3.js'],
+      technologies: ['Python', 'YOLOv5s', 'Streamlit', 'Computer Vision'],
       features: [
-        'Real-time data processing',
-        'Custom dashboard builder',
-        'Advanced filtering and aggregation',
-        'Export capabilities (PDF, Excel)',
-        'Role-based access control',
+        'Dynamic tracker selection',
+        'Real-time performance',
+        'Adaptive model switching',
+        'Aerial object tracking',
+        'Border surveillance applications',
       ],
-      github: '#',
+      github: 'https://github.com/ashifalam',
       demo: '#',
-      status: 'Production',
-      company: 'Leucine Tech',
-    },
-    {
-      title: 'SSO Integration System',
-      description:
-        'Implemented enterprise-grade Single Sign-On solutions supporting Azure AD and Okta. Enhanced security and user experience across multiple applications.',
-      image: '/api/placeholder/400/250',
-      technologies: ['Node.js', 'OAuth 2.0', 'SAML', 'Azure AD', 'Okta'],
-      features: [
-        'Multi-provider SSO support',
-        'Seamless user authentication',
-        'Session management',
-        'Security compliance (GDPR, SOC2)',
-        'Audit logging',
-      ],
-      github: '#',
-      demo: '#',
-      status: 'Production',
-      company: 'Leucine Tech',
-    },
-    {
-      title: 'Microservices Architecture for McAfee',
-      description:
-        'Developed scalable microservices architecture handling millions of requests. Implemented efficient data layer with PostgreSQL and Knex ORM.',
-      image: '/api/placeholder/400/250',
-      technologies: [
-        'Node.js',
-        'PostgreSQL',
-        'Knex.js',
-        'Docker',
-        'Kubernetes',
-      ],
-      features: [
-        'High-performance APIs',
-        'Auto-scaling capabilities',
-        'Database optimization',
-        'Monitoring and logging',
-        'CI/CD pipeline integration',
-      ],
-      github: '#',
-      demo: '#',
-      status: 'Production',
-      company: 'Zopsmart',
-    },
-    {
-      title: 'E-commerce Rule Engine',
-      description:
-        'Created an intelligent matching system connecting products with artisans based on skills, availability, and cost optimization algorithms.',
-      image: '/api/placeholder/400/250',
-      technologies: [
-        'Node.js',
-        'Express.js',
-        'MySQL',
-        'Redis',
-        'Algorithm Design',
-      ],
-      features: [
-        'Smart matching algorithms',
-        'Real-time availability tracking',
-        'Cost optimization',
-        'Performance analytics',
-        'Scalable architecture',
-      ],
-      github: '#',
-      demo: '#',
-      status: 'Production',
-      company: 'Lal10',
-    },
-    {
-      title: 'Spotify Clone',
-      description:
-        'Full-stack music streaming application with user authentication, playlist management, and real-time music playback functionality.',
-      image: '/api/placeholder/400/250',
-      technologies: ['React', 'Redux', 'Express.js', 'MySQL', 'Node.js'],
-      features: [
-        'User authentication',
-        'Music streaming',
-        'Playlist management',
-        'Search functionality',
-        'Responsive design',
-      ],
-      github: '#',
-      demo: '#',
-      status: 'Demo',
+      // status: 'Demo',
       company: 'Personal Project',
     },
     {
-      title: 'Project Issue Tracker',
+      title: 'SignSense - ISL Translation System',
       description:
-        'Comprehensive project management tool with issue tracking, team collaboration, and progress monitoring capabilities.',
+        'Integrates computer vision and machine learning to offer real-time communication assistance, translating ISL and detecting emotional states in spoken language. Benefits individuals with hearing impairments.',
       image: '/api/placeholder/400/250',
-      technologies: ['React', 'Node.js', 'Express.js', 'MySQL', 'Socket.io'],
+      technologies: [
+        'Python',
+        'RoboFlow',
+        'YOLOv5s',
+        'Streamlit',
+        'Computer Vision',
+      ],
       features: [
-        'Issue tracking',
-        'Team collaboration',
-        'Real-time updates',
-        'Progress monitoring',
-        'Reporting dashboard',
+        'Real-time ISL translation',
+        'Emotional state detection',
+        'Communication assistance',
+        'Dataset augmentation',
+        'Accessibility enhancement',
+      ],
+      github: 'https://github.com/ashifalam',
+      demo: '#',
+      // status: 'Demo',
+      company: 'Personal Project',
+    },
+    {
+      title: 'Duplicate Question Pairs Detection',
+      description:
+        'Duplicate question pairs based on Quora questions that share identical or closely similar meanings, capturing semantic equivalence using advanced NLP techniques.',
+      image: '/api/placeholder/400/250',
+      technologies: ['Python', 'Machine Learning', 'NLTK', 'NLP'],
+      features: [
+        'Semantic equivalence detection',
+        'TF-IDF implementation',
+        'Word embeddings',
+        'Deep learning models',
+        'False positive minimization',
+      ],
+      github: 'https://github.com/ashifalam',
+      demo: '#',
+      // status: 'Demo',
+      company: 'Personal Project',
+    },
+    {
+      title: 'Medical Diagnostic Application',
+      description:
+        'Developed an application using machine learning and deep learning to address challenges in interpreting laboratory test results, specifically focusing on TyphifastICT cards for classification.',
+      image: '/api/placeholder/400/250',
+      technologies: [
+        'Python',
+        'YOLOv8',
+        'Roboflow',
+        'Deep Learning',
+        'Computer Vision',
+      ],
+      features: [
+        'Medical image analysis',
+        'Automated classification',
+        'Multi-card segmentation',
+        'Error reduction',
+        'Robust preprocessing',
       ],
       github: '#',
       demo: '#',
-      status: 'Demo',
-      company: 'Personal Project',
+      // status: 'Production',
+      company: 'Anand Neuburg Diagnostic Laboratory',
     },
   ];
 
@@ -175,7 +139,7 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {/* Status Badge */}
+                {/* Status Badge
                 <div className="absolute top-4 right-4">
                   <span
                     className={`px-2 py-1 rounded-full text-xs font-medium ${
@@ -186,7 +150,7 @@ const Projects = () => {
                   >
                     {project.status}
                   </span>
-                </div>
+                </div> */}
               </div>
 
               <CardHeader>
@@ -199,9 +163,9 @@ const Projects = () => {
                       {project.company}
                     </p>
                   </div>
-                  {project.status === 'Production' && (
+                  {/* {project.status === 'Production' && (
                     <HiStar className="h-5 w-5 text-yellow-500 flex-shrink-0" />
-                  )}
+                  )} */}
                 </div>
               </CardHeader>
 
@@ -279,7 +243,7 @@ const Projects = () => {
                 variant="primary"
                 icon={FaGithub}
                 onClick={() =>
-                  window.open('https://github.com/aquifzubair', '_blank')
+                  window.open('https://github.com/ashifalam', '_blank')
                 }
               >
                 View All Projects

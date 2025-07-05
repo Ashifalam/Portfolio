@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://aquifzubair.dev/sitemap.xml
+Sitemap: https://ashifalam.dev/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1

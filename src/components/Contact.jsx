@@ -27,15 +27,15 @@ const Contact = () => {
     {
       icon: HiMail,
       label: 'Email',
-      value: 'aquifzubair98@gmail.com',
-      href: 'mailto:aquifzubair98@gmail.com',
+      value: 'ashifalam470@gmail.com',
+      href: 'mailto:ashifalam470@gmail.com',
       color: 'text-blue-600 dark:text-blue-400',
     },
     {
       icon: HiPhone,
       label: 'Phone',
-      value: '+91 7070742505',
-      href: 'tel:+917070742505',
+      value: '+91 7667053598',
+      href: 'tel:+917667053598',
       color: 'text-green-600 dark:text-green-400',
     },
     {
@@ -51,13 +51,13 @@ const Contact = () => {
     {
       name: 'LinkedIn',
       icon: FaLinkedin,
-      url: 'https://www.linkedin.com/in/aquif-zubair/',
+      url: 'https://www.linkedin.com/in/ashif-alam-396521207/',
       color: 'hover:text-blue-600',
     },
     {
       name: 'GitHub',
       icon: FaGithub,
-      url: 'https://github.com/aquifzubair',
+      url: 'https://github.com/ashifalam',
       color: 'hover:text-gray-900 dark:hover:text-white',
     },
     {
@@ -86,7 +86,7 @@ const Contact = () => {
         from_email: formData.email,
         subject: formData.subject,
         message: formData.message,
-        to_email: 'aquifzubair98@gmail.com',
+        to_email: 'ashifalam470@gmail.com',
       };
 
       if (
