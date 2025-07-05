@@ -6,18 +6,20 @@ import Card, { CardBody } from './Card';
 const About = () => {
   const stats = [
     { icon: HiCode, label: 'Years Experience', value: '5+' },
-    { icon: HiServer, label: 'Projects Completed', value: '20+' },
+    { icon: HiServer, label: 'Projects Completed', value: '25+' },
     { icon: HiDatabase, label: 'Technologies', value: '15+' },
-    { icon: HiLightningBolt, label: 'Performance Boost', value: '40%' },
+    { icon: HiLightningBolt, label: 'Performance Boost', value: '70%' },
   ];
 
   const highlights = [
-    'Specialized in Node.js and PostgreSQL development',
-    'Expert in microservices architecture and system design',
-    'Led teams of 5+ developers across multiple projects',
-    'Optimized database queries improving performance by 40%',
-    'Implemented enterprise SSO solutions (Azure, Okta)',
-    'Built scalable backend systems handling millions of requests',
+    'Recently promoted to Senior Software Engineer in April 2025',
+    'Specialized in Node.js and PostgreSQL with 5+ years experience',
+    'Expert in microservices architecture and scalable system design',
+    'Led teams of 8+ developers with code reviews and mentoring',
+    'Optimized database queries improving performance by up to 70%',
+    'Implemented enterprise SSO solutions (Azure, Okta) reducing auth time by 60%',
+    'Built scalable backend systems handling 10,000+ concurrent users',
+    'Architected analytics dashboards improving data visualization by 40%',
   ];
 
   return (
@@ -42,25 +44,26 @@ const About = () => {
 
           <div className="space-y-4 text-gray-600 dark:text-gray-300">
             <p>
-              I'm a passionate Software Engineer with over 5 years of experience
-              specializing in backend development and system architecture.
-              Currently working at Leucine Tech, I focus on building scalable
-              microservices and implementing enterprise-level solutions.
+              I'm a passionate Senior Software Engineer with over 5 years of experience
+              specializing in backend development and system architecture. Recently promoted
+              in April 2025 at Leucine - AI for Pharma, I focus on building scalable
+              microservices and implementing enterprise-level solutions for high-traffic applications.
             </p>
 
             <p>
               My journey in software development has taken me through various
-              domains, from e-commerce platforms to enterprise applications. I
-              have a proven track record of optimizing system performance,
-              leading development teams, and delivering high-quality software
-              solutions that drive business growth.
+              domains, from e-commerce platforms to enterprise AI applications. I
+              have a proven track record of optimizing system performance by up to 70%,
+              leading cross-functional teams, and delivering high-quality software
+              solutions that drive business growth and enhance user experience.
             </p>
 
             <p>
               When I'm not coding, I enjoy exploring new technologies,
               contributing to open-source projects, and mentoring junior
-              developers. I believe in continuous learning and staying updated
-              with the latest industry trends.
+              developers. I believe in continuous learning, staying updated
+              with the latest industry trends, and sharing knowledge through code reviews
+              and technical guidance.
             </p>
           </div>
 
@@ -142,7 +145,7 @@ const About = () => {
                     Aquif Zubair
                   </h4>
                   <p className="text-gray-600 dark:text-gray-300 text-sm">
-                    Software Engineer
+                    Senior Software Engineer
                   </p>
                   <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">
                     Bangalore, India

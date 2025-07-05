@@ -150,88 +150,147 @@ const Navigation = () => {
             <>
               {/* Backdrop */}
               <motion.div
-                className="md:hidden fixed inset-0 bg-black/20 backdrop-blur-sm z-40"
+                className="md:hidden fixed inset-0 bg-black/30 backdrop-blur-sm z-40"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.2 }}
+                transition={{ duration: 0.3 }}
                 onClick={() => setIsOpen(false)}
               />
 
               {/* Menu */}
               <motion.div
                 ref={menuRef}
-                className="md:hidden absolute top-full left-4 right-4 shadow-2xl border-2 border-secondary-300 dark:border-secondary-600 rounded-2xl mt-3 overflow-hidden z-50"
+                className="md:hidden fixed top-0 right-0 h-full w-80 max-w-[85vw] shadow-2xl z-50"
                 style={{
                   backgroundColor: isDark ? '#0f172a' : '#ffffff',
-                  opacity: 1,
+                  borderLeft: `1px solid ${isDark ? 'rgba(148, 163, 184, 0.1)' : 'rgba(148, 163, 184, 0.2)'}`,
                 }}
-                initial={{ opacity: 0, y: -20, scale: 0.9 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -20, scale: 0.9 }}
+                initial={{ x: '100%' }}
+                animate={{ x: 0 }}
+                exit={{ x: '100%' }}
                 transition={{
-                  duration: 0.3,
-                  ease: [0.4, 0.0, 0.2, 1],
-                  type: 'spring',
-                  damping: 25,
-                  stiffness: 300,
+                  duration: 0.35,
+                  ease: [0.25, 0.46, 0.45, 0.94],
                 }}
               >
-                <div className="relative py-6 px-3">
-                  <div className="flex flex-col space-y-2">
-                    {navItems.map((item, index) => (
-                      <motion.button
-                        key={item.name}
-                        className="group relative text-left text-secondary-700 dark:text-secondary-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-all duration-300 py-3 px-5 rounded-xl text-sm overflow-hidden"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{
-                          delay: index * 0.05,
-                          duration: 0.3,
-                          ease: [0.4, 0.0, 0.2, 1],
-                        }}
-                        whileHover={{
-                          scale: 1.02,
-                          transition: { duration: 0.2 },
-                        }}
-                        whileTap={{ scale: 0.98 }}
-                        onClick={() => scrollToSection(item.href)}
-                      >
-                        {/* Hover background effect */}
-                        <motion.div
-                          className="absolute inset-0 bg-gradient-to-r from-primary-50 to-accent-50 dark:from-primary-900/30 dark:to-accent-900/30 rounded-xl opacity-0 group-hover:opacity-100"
-                          transition={{ duration: 0.3 }}
-                        />
-
-                        {/* Animated border */}
-                        <motion.div
-                          className="absolute inset-0 border border-primary-200/50 dark:border-primary-700/50 rounded-xl opacity-0 group-hover:opacity-100"
-                          transition={{ duration: 0.3 }}
-                        />
-
-                        {/* Content */}
-                        <span className="relative z-10 flex items-center">
-                          <motion.span
-                            className="w-1.5 h-1.5 bg-primary-500 rounded-full mr-3 opacity-0 group-hover:opacity-100"
-                            initial={{ scale: 0 }}
-                            whileHover={{ scale: 1 }}
-                            transition={{ duration: 0.2 }}
-                          />
-                          {item.name}
-                        </span>
-                      </motion.button>
-                    ))}
+                <div className="h-full flex flex-col">
+                  {/* Header */}
+                  <div className="flex items-center justify-between p-4 border-b border-secondary-200/30 dark:border-secondary-700/30 flex-shrink-0">
+                    <motion.div
+                      className="text-lg font-bold text-gradient"
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.15 }}
+                    >
+                      Menu
+                    </motion.div>
+                    <motion.button
+                      className="p-2 rounded-full hover:bg-secondary-100 dark:hover:bg-secondary-800 transition-colors duration-200"
+                      onClick={() => setIsOpen(false)}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 0.1 }}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <HiX className="w-5 h-5 text-secondary-600 dark:text-secondary-400" />
+                    </motion.button>
                   </div>
 
-                  {/* Bottom decoration */}
+                  {/* Navigation Items */}
+                  <div className="flex-1 overflow-y-auto">
+                    <div className="p-4 space-y-1">
+                      {navItems.map((item, index) => (
+                        <motion.button
+                          key={item.name}
+                          className="group relative w-full text-left text-secondary-700 dark:text-secondary-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-all duration-200 py-4 px-4 rounded-2xl text-base overflow-hidden"
+                          initial={{ opacity: 0, x: 30 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{
+                            delay: index * 0.06 + 0.25,
+                            duration: 0.4,
+                            ease: [0.25, 0.46, 0.45, 0.94],
+                          }}
+                          whileHover={{
+                            scale: 1.02,
+                            transition: { duration: 0.15 },
+                          }}
+                          whileTap={{ scale: 0.98 }}
+                          onClick={() => scrollToSection(item.href)}
+                        >
+                          {/* Modern hover background */}
+                          <motion.div
+                            className="absolute inset-0 bg-gradient-to-r from-primary-500/8 to-accent-500/8 dark:from-primary-400/10 dark:to-accent-400/10 rounded-2xl opacity-0 group-hover:opacity-100"
+                            transition={{ duration: 0.2 }}
+                          />
+
+                          {/* Active indicator line */}
+                          <motion.div
+                            className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-gradient-to-b from-primary-500 to-accent-500 rounded-r-full opacity-0 group-hover:opacity-100"
+                            transition={{ duration: 0.2 }}
+                          />
+
+                          {/* Content */}
+                          <div className="relative z-10 flex items-center">
+                            <motion.div
+                              className="w-2 h-2 bg-primary-500 rounded-full mr-4 opacity-0 group-hover:opacity-100"
+                              initial={{ scale: 0 }}
+                              whileHover={{ scale: 1 }}
+                              transition={{ duration: 0.15 }}
+                            />
+                            <span className="font-medium">{item.name}</span>
+                          </div>
+                        </motion.button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Footer */}
                   <motion.div
-                    className="mt-4 pt-4 border-t border-secondary-200/50 dark:border-secondary-700/50"
-                    initial={{ opacity: 0, y: 10 }}
+                    className="p-4 border-t border-secondary-200/30 dark:border-secondary-700/30 flex-shrink-0"
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: navItems.length * 0.05 + 0.1 }}
+                    transition={{ delay: navItems.length * 0.06 + 0.4 }}
                   >
-                    <div className="flex justify-center">
-                      <div className="w-12 h-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full opacity-30" />
+                    {/* Theme Toggle */}
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-sm font-medium text-secondary-600 dark:text-secondary-400">
+                        Appearance
+                      </span>
+                      <motion.button
+                        className="flex items-center space-x-2 p-2 rounded-xl bg-secondary-100 dark:bg-secondary-800 hover:bg-secondary-200 dark:hover:bg-secondary-700 transition-colors duration-200"
+                        onClick={toggleDarkMode}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <motion.div
+                          initial={false}
+                          animate={{ rotate: isDark ? 180 : 0 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          {isDark ? (
+                            <HiSun className="w-4 h-4 text-amber-500" />
+                          ) : (
+                            <HiMoon className="w-4 h-4 text-slate-600" />
+                          )}
+                        </motion.div>
+                        <span className="text-xs font-medium text-secondary-600 dark:text-secondary-400">
+                          {isDark ? 'Light' : 'Dark'}
+                        </span>
+                      </motion.button>
+                    </div>
+
+                    {/* Brand */}
+                    <div className="text-center">
+                      <motion.div
+                        className="text-sm font-bold text-gradient opacity-60"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 0.6 }}
+                        transition={{ delay: 0.6 }}
+                      >
+                        Aquif Zubair
+                      </motion.div>
                     </div>
                   </motion.div>
                 </div>

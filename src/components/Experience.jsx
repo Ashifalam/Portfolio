@@ -6,17 +6,18 @@ import Card, { CardBody, CardHeader, CardTitle } from './Card';
 const Experience = () => {
   const experiences = [
     {
-      company: 'Leucine Tech',
-      position: 'Software Engineer (Node.js)',
+      company: 'Leucine - AI for Pharma',
+      position: 'Senior Software Engineer | Back End Developer',
       location: 'Bengaluru, Karnataka',
-      duration: 'March 2023 – Present',
+      duration: 'April 2023 – Present',
       type: 'Full-time',
+      promotion: 'Promoted to Senior Software Engineer in April 2025',
       achievements: [
-        'Designed and implemented dynamic analytics, reducing dependency on QuickSight and improving data visualisation flexibility',
-        'Successfully implemented Azure and Okta Single Sign-On (SSO) solutions, enhancing security and ease of access for users',
-        'Integrated Redis across the application to optimize API response time and enhance performance',
-        'Spearheaded several query optimization projects in PostgreSQL, significantly reducing response times and enhancing overall system performance',
-        'Played a crucial role in code reviews, providing constructive feedback to team members and maintaining code quality standards',
+        'Architected dynamic analytics dashboard, eliminating QuickSight dependency and improving data visualization flexibility by 40%',
+        'Deployed Azure and Okta SSO solutions, enhancing security protocols and reducing authentication time by 60%',
+        'Integrated Redis caching across application, optimizing API response times by 50%',
+        'Led PostgreSQL query optimization initiatives, reducing database response times by 70%',
+        'Conducted code reviews for 8+ developers, maintaining 95%+ code quality and mentoring junior engineers',
       ],
       technologies: [
         'Node.js',
@@ -24,20 +25,22 @@ const Experience = () => {
         'Redis',
         'Azure',
         'Okta',
-        'QuickSight',
+        'TypeORM',
+        'Knex.js',
+        'Microservices',
       ],
     },
     {
-      company: 'Zopsmart',
-      position: 'Software Engineer',
+      company: 'ZopSmart',
+      position: 'Software Engineer II',
       location: 'Bengaluru, Karnataka',
       duration: 'March 2022 – March 2023',
       type: 'Full-time',
       achievements: [
-        'Developed scalable Node.js microservices for McAfee',
-        'Designed and implemented data layer using Postgres and Knex as the ORM',
+        'Developed scalable Node.js microservices for McAfee, handling 10,000+ concurrent users',
+        'Designed data layer architecture using PostgreSQL and Knex ORM, improving data retrieval efficiency by 35%',
+        'Led technical guidance for 5 junior developers, achieving 100% project delivery success rate',
         'Collaborated with the client and other team members to turn requirements into code and deliver high-quality software on time',
-        'Leading a team of five junior developers, providing technical guidance and training to ensure successful project completion',
       ],
       technologies: [
         'Node.js',
@@ -45,6 +48,7 @@ const Experience = () => {
         'Knex.js',
         'Microservices',
         'Team Leadership',
+        'McAfee Integration',
       ],
     },
     {
@@ -54,11 +58,11 @@ const Experience = () => {
       duration: 'October 2020 – February 2022',
       type: 'Full-time',
       achievements: [
-        'Built backend systems using Node.js and Express',
-        'Designed efficient MySQL schemas and optimized queries',
-        'Developed APIs for integration with payment gateways and third-party systems',
-        'Created a rule engine matching products to artisans based on skills, availability, and cost',
-        'Developed and deployed multiple microservices using Java Spring Boot',
+        'Built scalable backend systems using Node.js and Express, supporting 5,000+ daily active users',
+        'Optimized MySQL database schemas, improving query performance by 45%',
+        'Developed secure APIs for payment gateways, processing 1,000+ transactions daily',
+        'Created intelligent rule engine for product-artisan matching and deployed Java Spring Boot microservices',
+        'Integrated third-party systems and APIs for enhanced functionality',
       ],
       technologies: [
         'Node.js',
@@ -67,19 +71,20 @@ const Experience = () => {
         'Java',
         'Spring Boot',
         'Payment Gateways',
+        'Rule Engine',
       ],
     },
     {
-      company: 'Mountblue',
-      position: 'Software Engineer - Trainee',
+      company: 'MountBlue Technologies',
+      position: 'Software Engineer Trainee',
       location: 'Bengaluru, Karnataka',
-      duration: 'June 2020 – September 2020',
+      duration: 'July 2020 – September 2020',
       type: 'Training',
       achievements: [
-        'Developed a Spotify clone using React, Redux, Express, and MySQL',
-        'Built a Project Issue Tracker with full-stack capabilities',
-        'Gained extensive experience in full-stack development',
-        'Worked effectively in an agile development environment',
+        'Developed Spotify clone using React, Redux, Express, and MySQL with complete streaming functionality',
+        'Built Project Issue Tracker with full-stack capabilities and authentication features',
+        'Gained extensive experience in full-stack development and modern web technologies',
+        'Worked effectively in an agile development environment with continuous learning',
       ],
       technologies: [
         'React',
@@ -90,18 +95,18 @@ const Experience = () => {
       ],
     },
     {
-      company: 'LiftOff',
-      position: 'Associate Software Engineer',
+      company: 'LiftOff LLC',
+      position: 'Software Engineer Trainee',
       location: 'Bengaluru, Karnataka',
-      duration: 'January 2019 – June 2020',
-      type: 'Full-time',
+      duration: 'February 2020 – June 2020',
+      type: 'Training',
       achievements: [
-        'Developed authentication and profile features using React and Firebase',
+        'Developed authentication and user profile management features using React',
         'Completed Data Structures and Algorithms certification from FreeCodeCamp',
-        'Developed responsive and user-friendly frontend interfaces',
-        'Collaborated with team members to implement best practices',
+        'Built responsive and user-friendly frontend interfaces with modern design principles',
+        'Collaborated with team members to implement development best practices and coding standards',
       ],
-      technologies: ['React', 'Firebase', 'JavaScript', 'Frontend Development'],
+      technologies: ['React', 'JavaScript', 'Frontend Development', 'Authentication'],
     },
   ];
 
@@ -164,6 +169,13 @@ const Experience = () => {
                           <HiOfficeBuilding className="h-4 w-4" />
                           <span>{exp.company}</span>
                         </div>
+                        {exp.promotion && (
+                          <div className="mt-2">
+                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                              🎉 {exp.promotion}
+                            </span>
+                          </div>
+                        )}
                       </div>
                       <div className="mt-2 md:mt-0 text-sm text-gray-500 dark:text-gray-400">
                         <div className="flex items-center space-x-1 mb-1">

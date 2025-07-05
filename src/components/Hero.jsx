@@ -8,7 +8,7 @@ const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0);
 
   const roles = [
-    'Software Engineer',
+    'Senior Software Engineer',
     'Backend Developer',
     'Node.js Expert',
     'System Architect',
@@ -107,10 +107,10 @@ const Hero = () => {
             className="text-lg md:text-xl text-secondary-600 dark:text-secondary-300 max-w-3xl mx-auto mb-12 leading-relaxed"
             variants={itemVariants}
           >
-            Passionate about building scalable backend solutions and robust
-            applications. Specializing in Node.js, PostgreSQL, and microservices
-            architecture with 5+ years of experience delivering high-performance
-            systems.
+            Senior Software Engineer with 5+ years of experience in backend development, 
+            specializing in Node.js and scalable microservices architecture. Recently promoted 
+            in April 2025, with a proven track record of optimizing system performance by up to 70% 
+            and leading cross-functional teams.
           </motion.p>
 
           {/* CTA Buttons */}

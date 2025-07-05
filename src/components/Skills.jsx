@@ -11,6 +11,7 @@ import {
   SiGit,
   SiMongodb,
   SiApachekafka,
+  SiSpring,
 } from 'react-icons/si';
 import { HiServer, HiDatabase, HiCode, HiCog, HiCloud } from 'react-icons/hi';
 import Section, { SectionHeader } from './Section';
@@ -26,10 +27,10 @@ const Skills = () => {
       skills: [
         { name: 'Node.js', icon: SiNodedotjs, level: 95 },
         { name: 'Express.js', icon: SiExpress, level: 90 },
-        { name: 'Koa.js', icon: HiServer, level: 75 },
+        { name: 'Koa.js', icon: HiServer, level: 80 },
         { name: 'JavaScript', icon: SiJavascript, level: 95 },
         { name: 'TypeScript', icon: SiTypescript, level: 85 },
-        { name: 'Kafka', icon: SiApachekafka, level: 70 },
+        { name: 'Java Spring Boot', icon: SiSpring, level: 75 },
       ],
     },
     {
@@ -37,10 +38,11 @@ const Skills = () => {
       icon: HiDatabase,
       color: 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400',
       skills: [
-        { name: 'PostgreSQL', icon: SiPostgresql, level: 90 },
-        { name: 'Redis', icon: SiRedis, level: 80 },
+        { name: 'PostgreSQL', icon: SiPostgresql, level: 95 },
+        { name: 'Redis', icon: SiRedis, level: 85 },
         { name: 'MySQL', icon: SiPostgresql, level: 85 },
-        { name: 'MongoDB', icon: SiMongodb, level: 60 },
+        { name: 'TypeORM', icon: HiDatabase, level: 80 },
+        { name: 'Knex.js', icon: HiDatabase, level: 85 },
       ],
     },
     {
@@ -60,9 +62,12 @@ const Skills = () => {
       color:
         'bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-400',
       skills: [
-        { name: 'Docker', icon: SiDocker, level: 75 },
-        { name: 'AWS', icon: HiCloud, level: 70 },
-        { name: 'Git', icon: SiGit, level: 90 },
+        { name: 'Git', icon: SiGit, level: 95 },
+        { name: 'VS Code', icon: HiCog, level: 90 },
+        { name: 'Postman', icon: HiCog, level: 90 },
+        { name: 'Insomnia', icon: HiCog, level: 85 },
+        { name: 'Azure', icon: HiCloud, level: 75 },
+        { name: 'Okta', icon: HiCog, level: 70 },
       ],
     },
   ];
@@ -163,22 +168,24 @@ const Skills = () => {
               Core Expertise
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-3xl mx-auto">
-              Specialized in building scalable backend systems with Node.js and
-              PostgreSQL. Experienced in microservices architecture, API
-              development, database optimization, and enterprise-level
-              integrations.
+              Senior Software Engineer specialized in building scalable backend systems with Node.js and
+              PostgreSQL. Expert in microservices architecture, API development, database optimization, 
+              and enterprise-level integrations. Recently promoted with proven track record of optimizing 
+              system performance by up to 70%.
             </p>
 
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                'Microservices',
+                'Microservices Architecture',
                 'API Development',
-                'Database Design',
-                'Performance Optimization',
+                'Database Optimization',
+                'Performance Tuning',
                 'System Architecture',
-                'Code Reviews',
+                'Code Reviews & Mentoring',
                 'Team Leadership',
-                'Agile Development',
+                'Enterprise SSO',
+                'Payment Gateways',
+                'Analytics Dashboards',
               ].map((skill, index) => (
                 <motion.span
                   key={index}
