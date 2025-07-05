@@ -24,15 +24,15 @@ function generateVersionPlugin() {
           // If empty (CI/CD detached HEAD), try alternative methods
           if (!branch) {
             // Try to get branch from environment variables (common in CI/CD)
-            // eslint-disable-next-line no-undef
+            /* eslint-disable no-undef */
             branch =
               process.env.BRANCH ||
               process.env.HEAD ||
               process.env.NETLIFY_BRANCH ||
-              // eslint-disable-next-line no-undef
               process.env.VERCEL_GIT_COMMIT_REF ||
               process.env.CF_PAGES_BRANCH ||
               'main';
+            /* eslint-enable no-undef */
           }
         } catch {
           branch = 'main'; // fallback
