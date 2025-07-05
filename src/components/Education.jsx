@@ -22,6 +22,10 @@ const Education = () => {
         'Specialized in Artificial Intelligence and Machine Learning',
         'Strong foundation in AI/ML algorithms and deep learning',
         'Participated in various hackathons and technical workshops',
+        'Graduated with excellent CGPA of 9.13',
+        'Specialized in Artificial Intelligence and Machine Learning',
+        'Strong foundation in AI/ML algorithms and deep learning',
+        'Participated in various hackathons and technical workshops',
       ],
       subjects: [
         'Machine Learning',
