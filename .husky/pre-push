@@ -1,16 +1,12 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
 
 echo "🔍 Running pre-push quality checks..."
 
-########################################
-# ESLint check with error count limit
-########################################
+# ESLint check
 echo "📋 Running ESLint..."
 ESLINT_OUTPUT=$(npm run lint 2>&1)
 MAX_ALLOWED_ERRORS=28
 
-# Try to extract ESLint error count from output
 ERROR_COUNT=$(echo "$ESLINT_OUTPUT" | grep "✖" | grep -o "[0-9]\+ problems" | grep -o "[0-9]\+")
 
 if [ -z "$ERROR_COUNT" ]; then
@@ -23,41 +19,33 @@ echo "📊 Found $ERROR_COUNT ESLint errors (max allowed: $MAX_ALLOWED_ERRORS)"
 
 if [ "$ERROR_COUNT" -gt "$MAX_ALLOWED_ERRORS" ]; then
   echo "❌ ESLint error count ($ERROR_COUNT) exceeds max allowed ($MAX_ALLOWED_ERRORS)."
-  echo "🔧 Run 'npm run lint:fix' to fix issues."
   exit 1
 else
-  echo "✅ ESLint error count ($ERROR_COUNT) is within limit."
-  echo "📝 Consider fixing remaining errors in future commits."
+  echo "✅ ESLint error count ($ERROR_COUNT) is within allowed range."
 fi
 
-########################################
 # Prettier check
-########################################
 echo "🎨 Checking code formatting with Prettier..."
 npm run format:check
 if [ $? -ne 0 ]; then
-  echo "❌ Prettier found formatting issues. Run 'npm run format' to fix them."
+  echo "❌ Prettier formatting issues found. Run 'npm run format' to fix."
   exit 1
 fi
 
-########################################
-# Test runner
-########################################
+# Tests
 echo "🧪 Running tests..."
 npm run test:ci
 if [ $? -ne 0 ]; then
-  echo "❌ Tests failed. Fix failing tests before pushing."
+  echo "❌ Tests failed. Fix them before pushing."
   exit 1
 fi
 
-########################################
-# Build check
-########################################
-echo "🏗️ Running build check..."
+# Build
+echo "🏗️ Building project..."
 npm run build
 if [ $? -ne 0 ]; then
-  echo "❌ Build failed. Fix build issues before pushing."
+  echo "❌ Build failed. Fix the issues before pushing."
   exit 1
 fi
 
-echo "✅ All pre-push checks passed! 🚀"
+echo "✅ All checks passed. Ready to push! 🚀"
