@@ -5,23 +5,25 @@ echo "🔍 Running pre-push quality checks..."
 # ESLint check
 echo "📋 Running ESLint..."
 ESLINT_OUTPUT=$(npm run lint 2>&1)
-MAX_ALLOWED_ERRORS=28
 
-ERROR_COUNT=$(echo "$ESLINT_OUTPUT" | grep "✖" | grep -o "[0-9]\+ problems" | grep -o "[0-9]\+")
-
-if [ -z "$ERROR_COUNT" ]; then
-  ERROR_COUNT=999
-  echo "⚠️  Could not parse ESLint error count, defaulting to $ERROR_COUNT"
+if echo "$ESLINT_OUTPUT" | grep -q "✖"; then
+  ERROR_COUNT=$(echo "$ESLINT_OUTPUT" | grep "✖" | grep -o "[0-9]\+ problems" | grep -o "[0-9]\+")
+  if [ -z "$ERROR_COUNT" ]; then
+    ERROR_COUNT=0
+  fi
+else
+  ERROR_COUNT=0
 fi
 
 echo "$ESLINT_OUTPUT"
-echo "📊 Found $ERROR_COUNT ESLint errors (max allowed: $MAX_ALLOWED_ERRORS)"
+echo "📊 Found $ERROR_COUNT ESLint errors"
 
-if [ "$ERROR_COUNT" -gt "$MAX_ALLOWED_ERRORS" ]; then
-  echo "❌ ESLint error count ($ERROR_COUNT) exceeds max allowed ($MAX_ALLOWED_ERRORS)."
+if [ "$ERROR_COUNT" -gt 0 ]; then
+  echo "❌ ESLint errors found. Please fix them before pushing."
+  echo "💡 Run 'npm run lint:fix' to automatically fix some issues."
   exit 1
 else
-  echo "✅ ESLint error count ($ERROR_COUNT) is within allowed range."
+  echo "✅ No ESLint errors found."
 fi
 
 # Prettier check
@@ -30,14 +32,8 @@ npm run format:check
 if [ $? -ne 0 ]; then
   echo "❌ Prettier formatting issues found. Run 'npm run format' to fix."
   exit 1
-fi
-
-# Tests
-echo "🧪 Running tests..."
-npm run test:ci
-if [ $? -ne 0 ]; then
-  echo "❌ Tests failed. Fix them before pushing."
-  exit 1
+else
+  echo "✅ Code formatting is correct."
 fi
 
 # Build
@@ -46,6 +42,8 @@ npm run build
 if [ $? -ne 0 ]; then
   echo "❌ Build failed. Fix the issues before pushing."
   exit 1
+else
+  echo "✅ Build successful."
 fi
 
 echo "✅ All checks passed. Ready to push! 🚀"

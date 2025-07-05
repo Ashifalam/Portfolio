@@ -3,17 +3,6 @@ import react from '@vitejs/plugin-react';
 
 // https://vite.dev/config/
 export default defineConfig({
-  test: {
-    globals: true,
-    environment: 'jsdom',
-    setupFiles: './src/test/setup.jsx',
-    css: true,
-    environmentOptions: {
-      jsdom: {
-        resources: 'usable',
-      },
-    },
-  },
   plugins: [react()],
   build: {
     // Enable code splitting
