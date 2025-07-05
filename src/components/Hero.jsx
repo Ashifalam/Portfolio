@@ -107,10 +107,13 @@ const Hero = () => {
             className="text-lg md:text-xl text-secondary-600 dark:text-secondary-300 max-w-3xl mx-auto mb-12 leading-relaxed"
             variants={itemVariants}
           >
-            Senior Software Engineer with 5+ years of experience in backend development, 
-            specializing in Node.js and scalable microservices architecture. Recently promoted 
-            in April 2025, with a proven track record of optimizing system performance by up to 70% 
-            and leading cross-functional teams.
+            Senior Software Engineer with 5+ years of experience in backend
+            development, specializing in Node.js and microservices architecture.
+            Proven track record of leading teams, optimizing system performance
+            by up to 70%, and implementing solutions for high-traffic
+            applications. Recently promoted to Senior Software Engineer in April
+            2025, demonstrating strong technical leadership and delivery
+            capabilities.
           </motion.p>
 
           {/* CTA Buttons */}

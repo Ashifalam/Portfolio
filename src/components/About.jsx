@@ -13,13 +13,15 @@ const About = () => {
 
   const highlights = [
     'Recently promoted to Senior Software Engineer in April 2025',
-    'Specialized in Node.js and PostgreSQL with 5+ years experience',
-    'Expert in microservices architecture and scalable system design',
-    'Led teams of 8+ developers with code reviews and mentoring',
-    'Optimized database queries improving performance by up to 70%',
-    'Implemented enterprise SSO solutions (Azure, Okta) reducing auth time by 60%',
-    'Built scalable backend systems handling 10,000+ concurrent users',
-    'Architected analytics dashboards improving data visualization by 40%',
+    'Specialized in Node.js and microservices architecture with 5+ years experience',
+    'Proven track record of leading teams and optimizing system performance by up to 70%',
+    'Expert in implementing solutions for high-traffic applications',
+    'Strong technical leadership and delivery capabilities',
+    'Experience with PostgreSQL, MySQL, Redis, and MongoDB databases',
+    'Implemented Azure Active Directory and Okta SSO solutions',
+    'Built analytics dashboards replacing AWS QuickSight, improving flexibility by 40%',
+    'Led code reviews for 8+ developers maintaining 95%+ code quality standards',
+    'Developed secure payment gateway APIs processing 1,000+ daily transactions',
   ];
 
   return (
@@ -44,26 +46,29 @@ const About = () => {
 
           <div className="space-y-4 text-gray-600 dark:text-gray-300">
             <p>
-              I'm a passionate Senior Software Engineer with over 5 years of experience
-              specializing in backend development and system architecture. Recently promoted
-              in April 2025 at Leucine - AI for Pharma, I focus on building scalable
-              microservices and implementing enterprise-level solutions for high-traffic applications.
+              I'm a passionate Senior Software Engineer with over 5 years of
+              experience specializing in backend development and system
+              architecture. Recently promoted in April 2025 at Leucine - AI for
+              Pharma, I focus on building scalable microservices and
+              implementing enterprise-level solutions for high-traffic
+              applications.
             </p>
 
             <p>
               My journey in software development has taken me through various
-              domains, from e-commerce platforms to enterprise AI applications. I
-              have a proven track record of optimizing system performance by up to 70%,
-              leading cross-functional teams, and delivering high-quality software
-              solutions that drive business growth and enhance user experience.
+              domains, from e-commerce platforms to enterprise AI applications.
+              I have a proven track record of optimizing system performance by
+              up to 70%, leading cross-functional teams, and delivering
+              high-quality software solutions that drive business growth and
+              enhance user experience.
             </p>
 
             <p>
               When I'm not coding, I enjoy exploring new technologies,
               contributing to open-source projects, and mentoring junior
-              developers. I believe in continuous learning, staying updated
-              with the latest industry trends, and sharing knowledge through code reviews
-              and technical guidance.
+              developers. I believe in continuous learning, staying updated with
+              the latest industry trends, and sharing knowledge through code
+              reviews and technical guidance.
             </p>
           </div>
 

@@ -62,7 +62,11 @@ self.addEventListener('fetch', event => {
   }
 
   // Skip cross-origin requests that we don't want to cache
-  if (url.origin !== location.origin && !url.hostname.includes('fonts.googleapis.com') && !url.hostname.includes('fonts.gstatic.com')) {
+  if (
+    url.origin !== location.origin &&
+    !url.hostname.includes('fonts.googleapis.com') &&
+    !url.hostname.includes('fonts.gstatic.com')
+  ) {
     return;
   }
 

@@ -4,70 +4,108 @@ import {
   SiPostgresql,
   SiJavascript,
   SiTypescript,
-  SiReact,
   SiExpress,
   SiRedis,
   SiDocker,
   SiGit,
   SiMongodb,
-  SiApachekafka,
   SiSpring,
 } from 'react-icons/si';
-import { HiServer, HiDatabase, HiCode, HiCog, HiCloud } from 'react-icons/hi';
+import {
+  HiServer,
+  HiDatabase,
+  HiCode,
+  HiCog,
+  HiCloud,
+  HiLightningBolt,
+} from 'react-icons/hi';
 import Section, { SectionHeader } from './Section';
 import Card, { CardBody, CardHeader, CardTitle } from './Card';
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Backend Development',
-      icon: HiServer,
+      title: 'Programming Languages',
+      icon: HiCode,
       color:
         'bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400',
+      skills: [
+        { name: 'JavaScript', icon: SiJavascript, level: 95 },
+        { name: 'TypeScript', icon: SiTypescript, level: 85 },
+        { name: 'Java', icon: SiSpring, level: 75 },
+        { name: 'SQL', icon: HiDatabase, level: 90 },
+        { name: 'HTML5', icon: HiCode, level: 85 },
+        { name: 'CSS3', icon: HiCode, level: 80 },
+      ],
+    },
+    {
+      title: 'Backend Technologies',
+      icon: HiServer,
+      color: 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400',
       skills: [
         { name: 'Node.js', icon: SiNodedotjs, level: 95 },
         { name: 'Express.js', icon: SiExpress, level: 90 },
         { name: 'Koa.js', icon: HiServer, level: 80 },
-        { name: 'JavaScript', icon: SiJavascript, level: 95 },
-        { name: 'TypeScript', icon: SiTypescript, level: 85 },
-        { name: 'Java Spring Boot', icon: SiSpring, level: 75 },
+        { name: 'TypeORM', icon: HiDatabase, level: 85 },
+        { name: 'Knex.js', icon: HiDatabase, level: 85 },
+        { name: 'Spring Boot', icon: SiSpring, level: 75 },
+        { name: 'REST APIs', icon: HiServer, level: 95 },
+        { name: 'Microservices', icon: HiServer, level: 90 },
       ],
     },
     {
       title: 'Databases',
       icon: HiDatabase,
-      color: 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400',
-      skills: [
-        { name: 'PostgreSQL', icon: SiPostgresql, level: 95 },
-        { name: 'Redis', icon: SiRedis, level: 85 },
-        { name: 'MySQL', icon: SiPostgresql, level: 85 },
-        { name: 'TypeORM', icon: HiDatabase, level: 80 },
-        { name: 'Knex.js', icon: HiDatabase, level: 85 },
-      ],
-    },
-    {
-      title: 'Frontend Development',
-      icon: HiCode,
       color:
         'bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-400',
       skills: [
-        { name: 'React.js', icon: SiReact, level: 80 },
-        { name: 'JavaScript', icon: SiJavascript, level: 90 },
-        { name: 'TypeScript', icon: SiTypescript, level: 75 },
+        { name: 'PostgreSQL', icon: SiPostgresql, level: 95 },
+        { name: 'MySQL', icon: SiPostgresql, level: 85 },
+        { name: 'Redis', icon: SiRedis, level: 85 },
+        { name: 'MongoDB', icon: SiMongodb, level: 75 },
       ],
     },
     {
-      title: 'DevOps & Tools',
-      icon: HiCog,
+      title: 'Cloud & DevOps',
+      icon: HiCloud,
       color:
         'bg-orange-100 dark:bg-orange-900 text-orange-600 dark:text-orange-400',
       skills: [
-        { name: 'Git', icon: SiGit, level: 95 },
-        { name: 'VS Code', icon: HiCog, level: 90 },
-        { name: 'Postman', icon: HiCog, level: 90 },
-        { name: 'Insomnia', icon: HiCog, level: 85 },
+        { name: 'AWS', icon: HiCloud, level: 80 },
         { name: 'Azure', icon: HiCloud, level: 75 },
-        { name: 'Okta', icon: HiCog, level: 70 },
+        { name: 'Docker', icon: SiDocker, level: 80 },
+        { name: 'CI/CD', icon: HiCog, level: 85 },
+        { name: 'Git', icon: SiGit, level: 95 },
+        { name: 'GitHub Actions', icon: SiGit, level: 80 },
+      ],
+    },
+    {
+      title: 'Development Tools',
+      icon: HiCog,
+      color:
+        'bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400',
+      skills: [
+        { name: 'VS Code', icon: HiCog, level: 95 },
+        { name: 'Postman', icon: HiCog, level: 90 },
+        { name: 'JIRA', icon: HiCog, level: 85 },
+        { name: 'Confluence', icon: HiCog, level: 80 },
+        { name: 'GitLab', icon: SiGit, level: 85 },
+        { name: 'GitHub', icon: SiGit, level: 95 },
+      ],
+    },
+    {
+      title: 'Testing & Security',
+      icon: HiLightningBolt,
+      color: 'bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-400',
+      skills: [
+        { name: 'Unit Testing', icon: HiLightningBolt, level: 85 },
+        { name: 'Integration Testing', icon: HiLightningBolt, level: 80 },
+        { name: 'Jest', icon: HiLightningBolt, level: 85 },
+        { name: 'Mocha', icon: HiLightningBolt, level: 80 },
+        { name: 'OAuth 2.0', icon: HiLightningBolt, level: 85 },
+        { name: 'SSO', icon: HiLightningBolt, level: 80 },
+        { name: 'JWT', icon: HiLightningBolt, level: 85 },
+        { name: 'API Security', icon: HiLightningBolt, level: 80 },
       ],
     },
   ];
@@ -168,10 +206,11 @@ const Skills = () => {
               Core Expertise
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-3xl mx-auto">
-              Senior Software Engineer specialized in building scalable backend systems with Node.js and
-              PostgreSQL. Expert in microservices architecture, API development, database optimization, 
-              and enterprise-level integrations. Recently promoted with proven track record of optimizing 
-              system performance by up to 70%.
+              Senior Software Engineer specialized in building scalable backend
+              systems with Node.js and PostgreSQL. Expert in microservices
+              architecture, API development, database optimization, and
+              enterprise-level integrations. Recently promoted with proven track
+              record of optimizing system performance by up to 70%.
             </p>
 
             <div className="flex flex-wrap justify-center gap-3">
