@@ -21,12 +21,8 @@ const Projects = () => {
         'Border surveillance applications',
       ],
       github: 'https://github.com/ashifalam',
-      demo: '#',
-<<<<<<< HEAD
-      // status: 'Demo',
-=======
-      status: 'Demo',
->>>>>>> 8719df63029fb4be14546f7aefb3df5bd8fe0cdf
+      demo: '#',     
+       // status: 'Demo',
       company: 'Personal Project',
     },
     {
@@ -34,24 +30,16 @@ const Projects = () => {
       description:
         'Integrates computer vision and machine learning to offer real-time communication assistance, translating ISL and detecting emotional states in spoken language. Benefits individuals with hearing impairments.',
       image: '/api/placeholder/400/250',
-<<<<<<< HEAD
-      technologies: [
-        'Python',
-        'RoboFlow',
-        'YOLOv5s',
-        'Streamlit',
-        'Computer Vision',
-      ],
-=======
+
       technologies: ['Python', 'RoboFlow', 'YOLOv5s', 'Streamlit', 'Computer Vision'],
->>>>>>> 8719df63029fb4be14546f7aefb3df5bd8fe0cdf
+
       features: [
         'Real-time ISL translation',
         'Emotional state detection',
         'Communication assistance',
         'Dataset augmentation',
         'Accessibility enhancement',
-<<<<<<< HEAD
+
       ],
       github: 'https://github.com/ashifalam',
       demo: '#',
@@ -94,50 +82,14 @@ const Projects = () => {
         'Multi-card segmentation',
         'Error reduction',
         'Robust preprocessing',
-=======
->>>>>>> 8719df63029fb4be14546f7aefb3df5bd8fe0cdf
-      ],
-      github: 'https://github.com/ashifalam',
-      demo: '#',
-      // status: 'Production',
-      company: 'Anand Neuburg Diagnostic Laboratory',
-    },
-    {
-      title: 'Duplicate Question Pairs Detection',
-      description:
-        'Duplicate question pairs based on Quora questions that share identical or closely similar meanings, capturing semantic equivalence using advanced NLP techniques.',
-      image: '/api/placeholder/400/250',
-      technologies: ['Python', 'Machine Learning', 'NLTK', 'NLP'],
-      features: [
-        'Semantic equivalence detection',
-        'TF-IDF implementation',
-        'Word embeddings',
-        'Deep learning models',
-        'False positive minimization',
-      ],
-      github: 'https://github.com/ashifalam',
-      demo: '#',
-      status: 'Demo',
-      company: 'Personal Project',
-    },
-    {
-      title: 'Medical Diagnostic Application',
-      description:
-        'Developed an application using machine learning and deep learning to address challenges in interpreting laboratory test results, specifically focusing on TyphifastICT cards for classification.',
-      image: '/api/placeholder/400/250',
-      technologies: ['Python', 'YOLOv8', 'Roboflow', 'Deep Learning', 'Computer Vision'],
-      features: [
-        'Medical image analysis',
-        'Automated classification',
-        'Multi-card segmentation',
-        'Error reduction',
-        'Robust preprocessing',
+
       ],
       github: '#',
       demo: '#',
       status: 'Production',
       company: 'Anand Neuburg Diagnostic Laboratory',
     },
+    
   ];
 
   const containerVariants = {
